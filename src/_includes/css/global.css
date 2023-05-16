@@ -3,6 +3,8 @@
 	--max-page-width: 50rem;
 	--page-gutter: var(--space-s-m);
 	--page-inner-gap: var(--space-4xl);
+	--button-padding-block: 1ex;
+	--button-padding-inline: 1ch;
 
 	/* type */
 	--serif: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052, serif;
@@ -11,7 +13,7 @@
 	--text-lh: 1.585;
 	--heading-lh: 1.1;
 	--underline-thickness: 1px;
-	--border-radius: 2px;
+	--border-radius: 1px;
 
 	/* colors */
 	--primary-hue: 50deg;
@@ -105,7 +107,7 @@ a:where(:hover, :focus) {
 
 button,
 .btn {
-	padding: var(--space-3xs) var(--space-s);
+	padding: var(--button-padding-block) var(--button-padding-inline);
 	background-color: var(--text);
 	color: var(--bg);
 	font-size: var(--step-0);
@@ -131,7 +133,7 @@ blockquote {
 
 input {
 	border: unset;
-	padding: 1ex 1ch;
+	padding: var(--button-padding-block) var(--button-padding-inline);
 	font-size: var(--step-0);
 	background-color: var(--bg);
 	font-weight: 700;
