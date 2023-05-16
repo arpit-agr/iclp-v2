@@ -1,30 +1,42 @@
 :root {
+	/* space */
 	--max-page-width: 50rem;
 	--page-gutter: var(--space-s-8xl);
 
-	--color-dark: #111;
-	--color-light: #fffff8;
-	--color-accent: hsl(240deg 100% 38.63%);
+	/* type */
+	--serif: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052, serif;
+	--text-lh: 1.73;
+	--heading-lh: 1.1;
+
+	/* colors */
+	--primary-hue: 60deg;
+	--secondary-hue: 201.72deg;
+	--color-dark: hsl(var(--primary-hue) 0% 6.67%);
+	--color-light: hsl(var(--primary-hue) 100% 99.63%);
+	--color-accent: hsl(var(--secondary-hue) 95% 38%);
+
 	--color-dark-shade: color-mix(in srgb, var(--color-dark), var(--color-light));
+	--color-accent-shade: color-mix(
+		in srgb,
+		var(--color-accent),
+		var(--color-light)
+	);
 	--color-dark-a80: color-mix(in srgb, var(--color-dark), transparent 80%);
+	--color-accent-a80: color-mix(in srgb, var(--color-accent), transparent 80%);
 
 	--text: var(--color-dark);
 	--bg: var(--color-light);
 	--link-hover: var(--color-accent);
 	--link-underline: var(--color-dark-shade);
+	--link-underline-hover: var(--color-accent-shade);
 	--blockquote-border: var(--color-dark-a80);
-
-	--font-serif: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052,
-		serif;
-	--text-lh: 1.73;
-	--heading-lh: 1.1;
 }
 
 body {
 	background-color: var(--bg);
 	color: var(--text);
 
-	font-family: var(--font-serif);
+	font-family: var(--serif);
 	font-size: var(--step-1);
 	line-height: var(--text-lh);
 }
@@ -54,14 +66,14 @@ h3 {
 
 a {
 	color: currentColor;
-	text-decoration-color: var(--blockquote-border);
+	text-decoration-color: var(--link-underline);
 	text-decoration-thickness: 0.1ex;
 	text-underline-offset: 0.2ex;
 }
 
 a:where(:hover, :focus) {
 	color: var(--link-hover);
-	text-decoration-color: currentColor;
+	text-decoration-color: var(--link-underline-hover);
 }
 
 ul,
