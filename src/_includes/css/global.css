@@ -11,7 +11,7 @@
 
 	/* colors */
 	--primary-hue: 60deg;
-	--secondary-hue: 201.72deg;
+	--secondary-hue: 215deg;
 	--color-dark: hsl(var(--primary-hue) 0% 6.67%);
 	--color-light: hsl(var(--primary-hue) 100% 99.63%);
 	--color-accent: hsl(var(--secondary-hue) 100% 33%);
