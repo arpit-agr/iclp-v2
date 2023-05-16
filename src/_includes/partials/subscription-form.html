@@ -1,0 +1,37 @@
+<aside class="subscription-form">
+  <div class="subscription-form__inner wrapper">
+    <div class="flow">
+      <h2>Follow blog via email</h2>
+      <p class="form-desc">
+        Enter your email address to receive email notifications of new posts.
+      </p>
+    </div>
+    <form
+      class="flow"
+      name="subscription"
+      method="POST"
+      netlify-honeypot="bot-field"
+      data-netlify="true"
+    >
+      <label hidden>
+        Don’t fill this out if you’re human: 
+        <input name="bot-field" />
+      </label>
+      <label for="email">Email:</label>
+      <div class="with-sidebar">
+        <input
+          type="email"
+          name="email"
+          id="email"
+          autocomplete="email"
+          placeholder="Your email address"
+          title="The domain portion of the email address is invalid (the portion after the @)."
+          pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$"
+          required=""
+        >
+        <button type="submit">Send</button>
+      </div>
+      <p class="subscriber-count">Join 5,276 other subscribers</p>
+    </form>
+  </div>
+</aside>

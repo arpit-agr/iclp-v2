@@ -14,16 +14,22 @@
   {%- include "partials/meta.html" -%}
 </head>
 <body>
-  <a href="#main" class="skip-to-main">Skip to content</a>
+  <a href="#main" class="skip-to-main btn">Skip to content</a>
+
   <header class="site-head">
     {%- include "partials/header.html" -%}
   </header>
+
   <main id="main" tabindex="-1">
     {%- block content -%}
       This page is under maintenance.
     {%- endblock -%}
   </main>
+
+  {%- block asideContent -%}{%- endblock -%}
+
   <footer role="contentinfo"></footer>
+  
   {%- block bodyScripts -%}{%- endblock -%}
 </body>
 </html>

@@ -1,7 +1,7 @@
 .site-head__inner {
 	--cluster-horizontal-alignment: space-between;
 	--cluster-vertical-alignment: flex-start;
-	border-block-end: var(--underline-thickness) solid var(--color-dark-shade);
+	border-block-end: var(--underline-thickness) solid var(--section-separator);
 }
 
 .site-head__inner a {

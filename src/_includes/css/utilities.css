@@ -26,6 +26,27 @@
 	align-items: var(--cluster-vertical-alignment, center);
 }
 
+.full-bleed {
+	inline-size: 100vw;
+	margin-inline-start: calc(50% - 50vw);
+}
+
+.with-sidebar {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0;
+}
+
+.with-sidebar > :last-child {
+	flex-grow: 1;
+}
+
+.with-sidebar > :first-child {
+	flex-basis: 0;
+	flex-grow: 999;
+	min-inline-size: 50%;
+}
+
 .vh {
 	position: absolute;
 	inline-size: 1px;

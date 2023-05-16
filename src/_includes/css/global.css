@@ -27,6 +27,7 @@
 		var(--color-light)
 	);
 	--color-dark-a80: color-mix(in srgb, var(--color-dark), transparent 80%);
+	--color-light-a80: color-mix(in srgb, var(--color-light), transparent 80%);
 	--color-accent-a80: color-mix(in srgb, var(--color-accent), transparent 80%);
 
 	--text: var(--color-dark);
@@ -34,7 +35,8 @@
 	--link-hover: var(--color-accent);
 	--link-underline: var(--color-dark-shade);
 	--link-underline-hover: var(--color-accent-shade);
-	--blockquote-border: var(--color-dark-a80);
+	--section-separator: var(--color-dark-shade);
+	--element-border: var(--color-dark-a80);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -48,6 +50,7 @@
 
 		--bg: var(--color-dark);
 		--text: var(--color-light);
+		--element-border: var(--color-light-a80);
 	}
 }
 
@@ -100,17 +103,19 @@ a:where(:hover, :focus) {
 	text-decoration-color: var(--link-underline-hover);
 }
 
-button {
+button,
+.btn {
 	padding: var(--space-3xs) var(--space-s);
-	background-color: var(--bg);
-	color: var(--text);
+	background-color: var(--text);
+	color: var(--bg);
 	font-size: var(--step-0);
 	font-weight: 700;
 }
 
-button:where(:hover, :focus) {
-	background-color: var(--text);
-	color: var(--bg);
+button:where(:hover, :focus),
+.btn:where(:hover, :focus) {
+	background-color: var(--bg);
+	color: var(--text);
 }
 
 ul,
@@ -120,7 +125,7 @@ ol {
 
 blockquote {
 	padding-inline-start: 1em;
-	border-inline-start: 0.1em solid var(--blockquote-border);
+	border-inline-start: 0.1em solid var(--element-border);
 	font-style: italic;
 }
 
@@ -129,6 +134,7 @@ input {
 	padding: 1ex 1ch;
 	font-size: var(--step-0);
 	background-color: var(--bg);
+	font-weight: 700;
 }
 
 label {
@@ -137,4 +143,8 @@ label {
 
 strong {
 	font-weight: 700;
+}
+
+[id] {
+	scroll-margin-top: calc(var(--page-inner-gap) / 2);
 }
