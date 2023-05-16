@@ -2,15 +2,15 @@
 	--max-page-width: 50rem;
 	--page-gutter: var(--space-s-8xl);
 
-	--color-dark: hsl(0deg 0% 7%);
-	--color-light: hsl(60deg 100% 99%);
+	--color-dark: #111;
+	--color-light: #fffff8;
+	--color-accent: hsl(240deg 100% 38.63%);
 	--color-dark-shade: color-mix(in srgb, var(--color-dark), var(--color-light));
 	--color-dark-a80: color-mix(in srgb, var(--color-dark), transparent 80%);
-	--color-primary: hsl(240deg 100% 48.63%);
 
 	--text: var(--color-dark);
 	--bg: var(--color-light);
-	--link-hover: var(--color-primary);
+	--link-hover: var(--color-accent);
 	--link-underline: var(--color-dark-shade);
 	--blockquote-border: var(--color-dark-a80);
 
