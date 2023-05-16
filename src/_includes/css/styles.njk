@@ -2,7 +2,11 @@
 {% set css %}
   {% include "./reset.css" %}
   {% include "./a11y.css" %}
+  {% include "./type.css" %}
+  {% include "./space.css" %}
   {% include "./global.css" %}
+  {% include "./article.css" %}
+  {% include "./utilities.css" %}
 {% endset %}
 
 <style>{{ css | cssmin | safe }}</style>
