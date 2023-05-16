@@ -12,17 +12,9 @@ Section 30 of the Police Act grants to high-level police officers the authority 
 
 The scheme of Sections 30-32 set out what, in freedom of expression terminology, are known as “time/place/manner” (“T/M/P”) regulations: that is, in certain contexts, the State can regulate the time, the place, and the manner in which the freedom of speech (or assembly, or association) are to be exercised; but thee regulations must be content-neutral, and – importantly – they cannot amount to disguised prohibitions.
 
-## Lorem ipsum
-
 In this context, let us look at the G.O. (linked above). In paragraph 8 – after noting the history of accidents on highways – the G.O. notes that “it is therefore **ideal** that no license be granted for **any** application seeking permission to conduct a meeting on state highways and national highways”, but that in “rare and exceptional circumstances and for reasons to be recorded in writing, such an application could be considered.” The G.O. goes on to state that what these “rare” circumstances are would be dependent on factors such as “the width of the road, the duration of the meeting, the location of the venue, exit points, number of people likely to attend the meeting, crowd control measures etc.”
 
 In a detailed and closely-reasoned judgment delivered on 12 May 2023, the Division Bench of the High Court of Andhra Pradesh struck down this G.O. as unconstitutional [(Kaka Ramakrishna vs State of Andhra Pradesh)](http://chrome-extension//efaidnbmnnnibpcajpcglclefindmkaj/https://theleaflet.in/wp-content/uploads/2023/05/206400000052023_4.pdf). Chief Justice Prashant Kumar Mishra, writing for the bench, based his reasoning on the fact that the impugned G.O. was a restriction upon the right to freedom of speech and assembly, poorly masquerading as a T/M/P regulation.
-
-- Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-- Aliquam tincidunt mauris eu risus
-- Vestibulum auctor dapibus neque
-
-### Aliquam tincidunt
 
 CJ Mishra structured his opinion in the following way. He held, first, that it was beyond cavil that the constitutional right to freedom of expression and assembly included the ability to presumptively exercise that right on public roads. This was borne out by the long arc of Indian history, where protests and assemblies on roads had been an integral part of the freedom struggle, and also in the post-constitutional era, as an avenue for seeking change and reform (as an aside, it is somewhat refreshing to see a Court invoke the freedom struggle specifically for a rights-expanding interpretation!) **(para 29, 36)**. This took care of the government’s argument that the constitutional guarantees were extinguished or diminished in spaces like public roads – on the contrary, they applied – at least at the first instance – with even greater force. As CJ Mishra eloquently put it:
 
