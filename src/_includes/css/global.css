@@ -1,7 +1,7 @@
 :root {
 	/* space */
 	--max-page-width: 50rem;
-	--page-gutter: var(--space-s-8xl);
+	--page-gutter: var(--space-s-m);
 
 	/* type */
 	--serif: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052, serif;
