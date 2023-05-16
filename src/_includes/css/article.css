@@ -8,7 +8,7 @@
 	}
 }
 
-:where(article) :is(h1, h2, h3, blockquote) {
+:where(article) :is(h1, h2, h3, blockquote, blockquote + *) {
 	--flow-space: 1.5em;
 }
 
