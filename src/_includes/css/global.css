@@ -7,13 +7,14 @@
 	--serif: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052, serif;
 	--text-lh: 1.73;
 	--heading-lh: 1.1;
+	--underline-thickness: 1px;
 
 	/* colors */
 	--primary-hue: 60deg;
 	--secondary-hue: 201.72deg;
 	--color-dark: hsl(var(--primary-hue) 0% 6.67%);
 	--color-light: hsl(var(--primary-hue) 100% 99.63%);
-	--color-accent: hsl(var(--secondary-hue) 95% 38%);
+	--color-accent: hsl(var(--secondary-hue) 100% 33%);
 
 	--color-dark-shade: color-mix(in srgb, var(--color-dark), var(--color-light));
 	--color-accent-shade: color-mix(
@@ -67,8 +68,8 @@ h3 {
 a {
 	color: currentColor;
 	text-decoration-color: var(--link-underline);
-	text-decoration-thickness: 0.1ex;
-	text-underline-offset: 0.2ex;
+	text-decoration-thickness: var(--underline-thickness);
+	text-underline-offset: 2px;
 }
 
 a:where(:hover, :focus) {
