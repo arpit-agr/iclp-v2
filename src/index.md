@@ -1,6 +1,41 @@
 ---
-title: Hello World
-layout: "layouts/home.html"
+title: "Freedom of Assembly and “Regulations” Disguised as Bans: The Judgment of the Andhra Pradesh High Court"
+author: "Gautam Bhatia"
+date: 2023-05-15
+
+layout: "layouts/article.html"
 ---
 
-# {{ title }}
+On January 2, the Andhra Pradesh government [issued a G.O.](https://images.hindustantimes.com/telugu/img/2023/01/03/original/GO.RT.No._01_Public_meeting_assembly_1672729796042.pdf) that purported to “regulate” processions, meetings, and assemblies on public roads, on the ostensible ground of “safety.” [The trigger for this G.O. – it was claimed – was a stampede at a rally organised by the opposition Telugu Desam Party (TDP).](https://www.indiatoday.in/india/story/andhra-pradesh-govt-prohibits-meetings-rallies-on-roads-stampedes-at-tdp-rally-2316620-2023-01-03) The stated legal authority came from Section 30 of the [Police Act of 1861](https://www.mha.gov.in/sites/default/files/police_act_1861.pdf).
+
+Section 30 of the Police Act grants to high-level police officers the authority to “direct the conduct of all assemblies and processions on the public roads, or in the public streets or thoroughfares, and prescribe the routes by which, and the times at which, such processions may pass.” In cases where a breach of peace is anticipated, a license may be required. Section 30A authorises the police to stop any procession that violates the terms of the license, and Section 31 casts an affirmative obligation upon the police to keep order on public roads.
+
+The scheme of Sections 30-32 set out what, in freedom of expression terminology, are known as “time/place/manner” (“T/M/P”) regulations: that is, in certain contexts, the State can regulate the time, the place, and the manner in which the freedom of speech (or assembly, or association) are to be exercised; but thee regulations must be content-neutral, and – importantly – they cannot amount to disguised prohibitions.
+
+## Lorem ipsum
+
+In this context, let us look at the G.O. (linked above). In paragraph 8 – after noting the history of accidents on highways – the G.O. notes that “it is therefore **ideal** that no license be granted for **any** application seeking permission to conduct a meeting on state highways and national highways”, but that in “rare and exceptional circumstances and for reasons to be recorded in writing, such an application could be considered.” The G.O. goes on to state that what these “rare” circumstances are would be dependent on factors such as “the width of the road, the duration of the meeting, the location of the venue, exit points, number of people likely to attend the meeting, crowd control measures etc.”
+
+In a detailed and closely-reasoned judgment delivered on 12 May 2023, the Division Bench of the High Court of Andhra Pradesh struck down this G.O. as unconstitutional [(Kaka Ramakrishna vs State of Andhra Pradesh)](http://chrome-extension//efaidnbmnnnibpcajpcglclefindmkaj/https://theleaflet.in/wp-content/uploads/2023/05/206400000052023_4.pdf). Chief Justice Prashant Kumar Mishra, writing for the bench, based his reasoning on the fact that the impugned G.O. was a restriction upon the right to freedom of speech and assembly, poorly masquerading as a T/M/P regulation.
+
+- Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+- Aliquam tincidunt mauris eu risus
+- Vestibulum auctor dapibus neque
+
+### Aliquam tincidunt
+
+CJ Mishra structured his opinion in the following way. He held, first, that it was beyond cavil that the constitutional right to freedom of expression and assembly included the ability to presumptively exercise that right on public roads. This was borne out by the long arc of Indian history, where protests and assemblies on roads had been an integral part of the freedom struggle, and also in the post-constitutional era, as an avenue for seeking change and reform (as an aside, it is somewhat refreshing to see a Court invoke the freedom struggle specifically for a rights-expanding interpretation!) **(para 29, 36)**. This took care of the government’s argument that the constitutional guarantees were extinguished or diminished in spaces like public roads – on the contrary, they applied – at least at the first instance – with even greater force. As CJ Mishra eloquently put it:
+
+> Therefore, it is clear from a reading of these judgments that historically, culturally and politically, the tradition of public meetings, processions, assemblies etc., on streets, highways etc., have been recognized in this country. These meetings, processions etc., constitute an important facet of our political life. The freedom struggle is replete with examples of processions, dharnas, satyagrahas etc., conducted on the roads which lead to India’s tryst with destiny on 15.08.1947. If the political history of contemporary Andhra Pradesh is also considered, it is clear that there were many processions, padayatras, assemblies etc., which were conducted on public roads/highways across the State. **(para 43)**
+
+Having established the right, the Court turned to the restriction. It noted that the “rare and exceptional” circumstances referred to in the G.O. had not been enumerated or described **(para 30)** (relying upon the judgment in _Himat Lal K. Shah_). This, in effect, was a case of “unfettered discretion” **(para 33)**; and when this was combined with the G.O.’s statement that “it would be ideal” if no license was granted, the net effect was that the G.O.:
+
+> … virtually takes away the discretion that is to be exercised by the officers at a lower level. In effect it directs them not to issue licenses, on roads, highways, streets etc., and to suggest alternative places, for congregations, processions. This virtually amounts to a direction to act in a particular way which is the exact opposite of what the Act contemplates by leaving it to the discretion of the officer. **(para 38)**
+
+In other words, the G.O. sought to bypass the canalised discretion vested in police officers with respect to issuance of licenses, with a regime where this discretion was effectively overtaken and reshaped by the executive, without any constraining features. As CJ Mishra pithily put it, by “an executive order the provisions of the Act are sought to be **diluted and also controlled.” (para 38)**
+
+The Court then went on to hold that, in addition, the G.O. failed on the grounds of proportionality (para 39). Indeed – and this happens rarely – the Court held that it failed on the second prong itself, i.e., on the relatively easy threshold of “rationality.” As the Court noted:
+
+> The fact that an accident or incident occurred at a particular place cannot be used as an “objective/cause” to curtail the right to assemble, to take out processions etc., on all other roads. The cause of the earlier accident or incident relied on by the State should be studied fully and then safeguards or guidelines can be issued to prevent the repetition of such an incident if there is similarity in the ground level situation etc. **(para 40)** The Court deployed this test by noting that given that an important right was at stake, any attempt at curtailment had to be reviewed strictly: and under this strict level of scrutiny, the G.O. failed the rationality/objectivity test **(para 44)**. Having held that the G.O. was, in effect, a ban on the right altogether, the Court accordingly struck it down **(para 46)**.
+
+Taken as a whole, the High Court’s judgment is an impeccable example of a constitutional court effectively protecting fundamental rights against executive impunity, in a timely and effective fashion. Although the case traveled back and forth between the HC and the SC on an occasion, the final verdict has come within a matter of months, and without undue delays. Secondly, on the substance of the judgment itself, four important features stand out: first, the use of constitutional history to establish the right to free speech and assembly, even and indeed _especially_ on “public” roads; secondly, the express observation that the state’s rationale for limiting rights has to be scrutinised _strictly_, with the burden of justification lying upon the state, and not the other way round; thirdly, the juxtaposition of the text of the G.O. with the workings of the Police Act to show that, in effect, the G.O. amounts to a ban on protests, thinly masquerading as regulation; and _fourthly_, the effective deployment of the proportionality standard to scrutinise – and strike down – the restriction. It is to be hoped that the excellent example set by the High Court will now be followed across the board, when courts are called upon to examine cleverly-worded but grossly unconstitutional executive-imposed restrictions upon fundamental rights.
