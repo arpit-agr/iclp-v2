@@ -1,0 +1,17 @@
+{%- extends "layouts/base.html" -%} 
+{%- block content -%}
+	<article class="wrapper">
+		<header class="flow">
+      <h1>{{ title }}</h1>
+      <p class="meta-info">
+        - {{ author }} on
+        <time datetime="{{ date | dump }}">
+          {{ date | postDate }}
+        </time>
+      </p>
+    </header>
+    <div class="prose flow">
+      {{ content | safe }}
+    </div>
+	</article>
+{%- endblock -%}
