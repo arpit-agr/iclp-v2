@@ -2,15 +2,19 @@
 	/* space */
 	--max-page-width: 50rem;
 	--page-gutter: var(--space-s-m);
+	--page-inner-gap: var(--space-4xl);
 
 	/* type */
 	--serif: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052, serif;
-	--text-lh: 1.73;
+	--sans-serif: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	--text-lh: 1.585;
 	--heading-lh: 1.1;
 	--underline-thickness: 1px;
+	--border-radius: 2px;
 
 	/* colors */
-	--primary-hue: 60deg;
+	--primary-hue: 50deg;
 	--secondary-hue: 215deg;
 	--color-dark: hsl(var(--primary-hue) 0% 6.67%);
 	--color-light: hsl(var(--primary-hue) 100% 99.63%);
@@ -33,6 +37,20 @@
 	--blockquote-border: var(--color-dark-a80);
 }
 
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-accent: hsl(var(--primary-hue) 96% 49%);
+		--color-accent-shade: color-mix(
+			in srgb,
+			var(--color-accent),
+			var(--color-dark)
+		);
+
+		--bg: var(--color-dark);
+		--text: var(--color-light);
+	}
+}
+
 body {
 	background-color: var(--bg);
 	color: var(--text);
@@ -43,7 +61,8 @@ body {
 }
 
 main {
-	margin-block: var(--space-4xl);
+	--stack-gap: var(--page-inner-gap);
+	margin-block: var(--page-inner-gap);
 }
 
 h1,
@@ -65,6 +84,10 @@ h3 {
 	font-size: var(--step-2);
 }
 
+:is(h1, h2, h3) + * {
+	--flow-space: 0.5em;
+}
+
 a {
 	color: currentColor;
 	text-decoration-color: var(--link-underline);
@@ -77,6 +100,19 @@ a:where(:hover, :focus) {
 	text-decoration-color: var(--link-underline-hover);
 }
 
+button {
+	padding: var(--space-3xs) var(--space-s);
+	background-color: var(--bg);
+	color: var(--text);
+	font-size: var(--step-0);
+	font-weight: 700;
+}
+
+button:where(:hover, :focus) {
+	background-color: var(--text);
+	color: var(--bg);
+}
+
 ul,
 ol {
 	padding-inline-start: 1em;
@@ -86,6 +122,17 @@ blockquote {
 	padding-inline-start: 1em;
 	border-inline-start: 0.1em solid var(--blockquote-border);
 	font-style: italic;
+}
+
+input {
+	border: unset;
+	padding: 1ex 1ch;
+	font-size: var(--step-0);
+	background-color: var(--bg);
+}
+
+label {
+	font-weight: 700;
 }
 
 strong {

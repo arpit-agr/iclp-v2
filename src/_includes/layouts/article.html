@@ -4,7 +4,7 @@
 		<header class="flow">
       <h1>{{ title }}</h1>
       <p class="meta-info">
-        - <span class="vh">Published by </span> {{ author }} on
+        <span class="vh">Published by </span> {{ author }} on
         <time datetime={{ date | dump | safe }}>
           {{ date | postDate }}
         </time>
