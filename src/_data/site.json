@@ -4,6 +4,9 @@
 	"url": "https://example.com",
 	"themeColor": "#fffff8",
 	"colorScheme": "light dark",
-	"developerName": "Arpit Agrawal",
-	"developerLink": "arpit.agrawal2502@gmail.com"
+	"banner": {
+		"image": "bg_footer.png",
+		"text": "To no one will we sell, or deny, or delay, right or justice",
+		"clause": "[40]"
+	}
 }
