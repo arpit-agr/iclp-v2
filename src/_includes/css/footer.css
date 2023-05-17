@@ -1,0 +1,33 @@
+footer {
+	display: grid;
+	grid-template-areas: "content";
+	align-items: center;
+}
+
+footer > * {
+	grid-area: content;
+}
+
+footer img {
+	block-size: 100%;
+	inline-size: 100%;
+	object-fit: cover;
+	filter: contrast(1.5) grayscale(1) invert(var(--invert, 0))
+		drop-shadow(1px 1px 1px var(--text));
+}
+
+footer p {
+	padding: var(--page-inner-gap) var(--space-xs-s);
+	font-size: var(--step-5);
+	line-height: var(--heading-lh);
+	text-align: center;
+	z-index: 1;
+
+	filter: url(#distort);
+}
+
+@supports (text-wrap: balance) {
+	footer p {
+		text-wrap: balance;
+	}
+}

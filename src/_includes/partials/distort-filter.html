@@ -1,0 +1,9 @@
+{# https://henry.codes/writing/how-to-distort-text-with-svg/ #}
+<svg class="vh">
+	<defs>
+		<filter id="distort">
+			<feTurbulence baseFrequency="0.05 0.05" numOctaves="5" result="noise"  />
+			<feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="R">
+		</filter>
+	</defs>
+</svg>

@@ -47,6 +47,11 @@
 	min-inline-size: 70%;
 }
 
+.step--1 {
+	font-size: var(--step--1);
+	letter-spacing: 0.03em;
+}
+
 .vh {
 	position: absolute;
 	inline-size: 1px;
