@@ -1,10 +1,8 @@
 <aside class="subscription-form">
   <div class="subscription-form__inner wrapper">
     <div class="flow">
-      <h2>Follow blog via email</h2>
-      <p class="form-desc">
-        Enter your email address to receive email notifications of new posts.
-      </p>
+      <h2>{{ subscription.heading }}</h2>
+      <p class="form-desc">{{ subscription.description }}</p>
     </div>
     <form
       class="flow"
@@ -31,7 +29,9 @@
         >
         <button type="submit">Submit</button>
       </div>
-      <p class="subscriber-count">Join 5,276 other subscribers</p>
+      <p class="subscriber-count step--1">
+        Join {{ subscription.count }} other subscribers
+      </p>
     </form>
   </div>
 </aside>
