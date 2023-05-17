@@ -1,18 +1,30 @@
 .site-head__inner {
 	--cluster-horizontal-alignment: space-between;
-	--cluster-vertical-alignment: flex-start;
+	--cluster-vertical-alignment: flex-end;
 	border-block-end: var(--underline-thickness) solid var(--section-separator);
 }
 
 .site-head__inner a {
-	padding-block: var(--page-gutter);
+	padding: var(--nav-padding-block) var(--nav-padding-inline);
 
-	font-size: var(--step--1);
-	letter-spacing: 0.0375em;
-	line-height: var(--heading-lh);
+	/* arrived at this magic number by taking the average
+	 of 1.44 and 1.73 from the type scale */
+	line-height: 1.3425;
 	text-decoration-line: none;
 }
 
 .site-head__inner a:where(:hover, :focus) {
 	text-decoration-line: underline;
+}
+
+.site-head__inner nav {
+	--cluster-gap: 0;
+}
+
+.site-head__inner > a:first-child {
+	margin-inline-start: calc(-1 * var(--nav-padding-inline));
+}
+
+.site-head__inner nav a:last-child {
+	margin-inline-end: calc(-1 * var(--nav-padding-inline));
 }

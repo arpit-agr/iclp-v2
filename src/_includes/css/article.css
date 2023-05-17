@@ -16,11 +16,17 @@
 	font-size: var(--step-0);
 }
 
-@supports (initial-letter: 1 1) or (-webkit-initial-letter: 1 1) {
+/* @supports (initial-letter: 1 1) or (-webkit-initial-letter: 1 1) {
 	.prose::first-letter {
 		-webkit-initial-letter: 2 2;
 		initial-letter: 2 2;
 		font-weight: 700;
 		margin-inline-end: 0.5ch;
 	}
+} */
+
+:where(article) blockquote {
+	padding-inline-start: 1em;
+	border-inline-start: 0.1em solid var(--element-border);
+	font-style: italic;
 }

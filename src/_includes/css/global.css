@@ -3,6 +3,8 @@
 	--max-page-width: 50rem;
 	--page-gutter: var(--space-s-m);
 	--page-inner-gap: var(--space-4xl);
+	--nav-padding-block: var(--space-s-m);
+	--nav-padding-inline: var(--space-2xs-xs);
 	--button-padding-block: 1ex;
 	--button-padding-inline: 1ch;
 
@@ -19,7 +21,7 @@
 	--primary-hue: 50deg;
 	--secondary-hue: 215deg;
 	--color-dark: hsl(var(--primary-hue) 0% 6.67%);
-	--color-light: hsl(var(--primary-hue) 100% 99.63%);
+	--color-light: hsl(var(--primary-hue) 100% 98.63%);
 	--color-accent: hsl(var(--secondary-hue) 100% 33%);
 
 	--color-dark-shade: color-mix(in srgb, var(--color-dark), var(--color-light));
@@ -126,10 +128,10 @@ ol {
 	padding-inline-start: 1em;
 }
 
-blockquote {
-	padding-inline-start: 1em;
-	border-inline-start: 0.1em solid var(--element-border);
-	font-style: italic;
+@supports (hanging-punctuation: first) {
+	blockquote p {
+		hanging-punctuation: first;
+	}
 }
 
 input {
