@@ -30,4 +30,7 @@
 	outline: 0;
 	transform: translate(0);
 	border-radius: 0 0 var(--border-radius) 0;
+
+	background-color: var(--text);
+	color: var(--bg);
 }
