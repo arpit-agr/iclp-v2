@@ -3,8 +3,8 @@
 	--max-page-width: 50rem;
 	--page-gutter: var(--space-s-m);
 	--page-inner-gap: var(--space-4xl);
-	--nav-padding-block: var(--space-s-m);
-	--nav-padding-inline: var(--space-2xs-xs);
+	--nav-padding-block: var(--space-2xs);
+	--nav-padding-inline: var(--space-xs);
 	--button-padding-block: 1ex;
 	--button-padding-inline: 1ch;
 

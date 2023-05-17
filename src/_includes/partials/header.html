@@ -1,8 +1,16 @@
-<div class="site-head__inner cluster step--1 wrapper">
-  <a href="/">Indian Constitutional <br>Law and Philosophy</a>
+<div class="site-head__inner switcher step-0 wrapper">
+  <div class="site-name-container">
+    <a href="/" aria-label="Home">{{ site.name }}</a>
+  </div>
   {# TODO: update link #}
   <nav class="cluster">
-    <a href="#">Archive</a>
-    <a href="#">Search</a>
+    <a class="cluster" href="#">
+      {%- include "partials/search.html" -%}
+      Search
+    </a>
+    <a class="cluster" href="#">
+      {%- include "partials/newspaper.html" -%}
+      Newspaper Articles
+    </a>
   </nav>
 </div>
