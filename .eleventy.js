@@ -18,7 +18,10 @@ module.exports = function (eleventyConfig) {
 	// eleventyConfig.addWatchTarget("./src/_includes/css/");
 	// eleventyConfig.addWatchTarget('./src/scripts/');
 
-	//Filter
+	//Collections
+	eleventyConfig.addCollection("posts", function (collectionApi) {
+		return collectionApi.getFilteredByGlob("src/posts/*.md");
+	});
 	eleventyConfig.addFilter("cssmin", function (code) {
 		if (process.env.NODE_ENV === "production") {
 			return new CleanCSS({}).minify(code).styles;
