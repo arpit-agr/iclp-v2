@@ -15,22 +15,18 @@
 </head>
 <body>
   <a href="#main" class="skip-to-main btn">Skip to content</a>
+  
+  {%- block beforeMain -%}{%- endblock -%}
+  
+  {%- block content -%}
+    This page is under maintenance.
+  {%- endblock -%}
 
-  <header class="site-head">
-    {%- include "partials/header.html" -%}
-  </header>
-  
-  <main id="main" tabindex="-1">
-    {%- block content -%}
-      This page is under maintenance.
-    {%- endblock -%}
-  </main>
-  
-  {%- block asideContent -%}{%- endblock -%}
-  
-  <footer role="contentinfo">
-    {%- include "partials/footer.html" -%}
-  </footer>
+  <aside>
+    {%- block afterMain -%}{%- endblock -%}
+  </aside>
+    
+  {# <footer role="contentinfo"></footer> #}
   
   {%- block bodyScripts -%}{%- endblock -%}
 </body>

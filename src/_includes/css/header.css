@@ -1,28 +1,45 @@
 .site-head__inner {
-	/* Threshold is the container width at which
-	the component switches between a horizontal and vertical layout */
-	--threshold: 39.6875rem;
-}
-
-.site-name-container {
-	border-block-end: var(--underline-thickness) solid var(--section-separator);
+	border-block-end: var(--underline-thickness) solid var(--border-color);
 }
 
 .site-head__inner a {
-	display: inline-flex;
+	position: relative;
+	display: inline-block;
 	padding: var(--nav-padding-block) var(--nav-padding-inline);
-	/* arrived at this magic number by taking the average
-	 of 1.44 and 1.73 from the type scale */
-	line-height: 1.3425;
+	font-variant-caps: all-small-caps;
+	letter-spacing: var(--ls-1);
+	line-height: var(--lh-2);
+
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.08);
 	text-decoration-line: none;
 }
 
 .site-head__inner a:hover {
-	text-decoration-line: underline;
+	text-decoration-line: none;
+}
+
+.site-head__inner a:after {
+	content: "";
+	position: absolute;
+	inset-block-start: 100%;
+	inset-inline-start: auto;
+	inset-inline-end: var(--nav-padding-inline);
+	inline-size: 0%;
+	transition: all 0.4s ease;
+
+	block-size: var(--underline-thickness);
+}
+
+.site-head__inner a:hover:after {
+	inline-size: calc(100% - (2 * var(--nav-padding-inline)));
+	inset-inline-start: var(--nav-padding-inline);
+	inset-inline-end: auto;
+	background-color: var(--link-underline-hover);
 }
 
 :where(.site-head__inner) nav {
 	--cluster-gap: 0;
+	margin-inline-start: auto;
 }
 
 :where(.site-head__inner) nav a {
@@ -35,19 +52,4 @@
 
 :where(.site-head__inner) nav a:last-child {
 	margin-inline-end: calc(-1 * var(--nav-padding-inline));
-}
-
-/* viewport width at which the header switches into horizontal layout */
-@media (min-width: 41.875rem) {
-	.site-head__inner {
-		border-block-end: var(--underline-thickness) solid var(--section-separator);
-	}
-
-	.site-name-container {
-		border-block-end: unset;
-	}
-
-	:where(.site-head__inner) nav {
-		--cluster-horizontal-alignment: flex-end;
-	}
 }

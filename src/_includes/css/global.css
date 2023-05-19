@@ -4,7 +4,8 @@
 	--page-gutter: var(--space-s-m);
 	--page-inner-gap: var(--space-4xl);
 	--nav-padding-block: var(--space-2xs);
-	--nav-padding-inline: var(--space-xs);
+	--nav-padding-inline: var(--space-3xs-2xs);
+	--post-item-padding-block: var(--space-xs);
 	--button-padding-block: 1ex;
 	--button-padding-inline: 1ch;
 
@@ -12,76 +13,52 @@
 	--serif: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052, serif;
 	--sans-serif: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
 		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-	--text-lh: 1.585;
-	--heading-lh: 1.1;
+	--ls-1: -0.03em;
+	--ls-2: -0.015em;
+	--lh-1: 1.1;
+	--lh-2: 1.3425;
+	--lh-3: 1.585;
 	--underline-thickness: 1px;
 	--border-radius: 1px;
-
-	/* colors */
-	--primary-hue: 50deg;
-	--secondary-hue: 215deg;
-	--color-dark: hsl(var(--primary-hue) 0% 6.67%);
-	--color-light: hsl(var(--primary-hue) 100% 98.63%);
-	--color-accent: hsl(var(--secondary-hue) 100% 33%);
-
-	--color-dark-shade: color-mix(in srgb, var(--color-dark), var(--color-light));
-	--color-accent-shade: color-mix(
-		in srgb,
-		var(--color-accent),
-		var(--color-light)
-	);
-	--color-dark-a80: color-mix(in srgb, var(--color-dark), transparent 80%);
-	--color-light-a80: color-mix(in srgb, var(--color-light), transparent 80%);
-	--color-accent-a80: color-mix(in srgb, var(--color-accent), transparent 80%);
-
-	--text: var(--color-dark);
-	--bg: var(--color-light);
-	--link-hover: var(--color-accent);
-	--link-underline: var(--color-dark-shade);
-	--link-underline-hover: var(--color-accent-shade);
-	--section-separator: var(--color-dark-shade);
-	--element-border: var(--color-dark-a80);
-}
-
-@media (prefers-color-scheme: dark) {
-	:root {
-		--color-accent: hsl(var(--primary-hue) 96% 49%);
-		--color-accent-shade: color-mix(
-			in srgb,
-			var(--color-accent),
-			var(--color-dark)
-		);
-
-		--bg: var(--color-dark);
-		--text: var(--color-light);
-		--element-border: var(--color-light-a80);
-		--invert: 1;
-	}
 }
 
 body {
-	background-color: var(--bg);
-	color: var(--text);
+	display: flex;
+	flex-direction: column;
+
+	background-color: var(--primary-bg);
+	color: var(--secondary-text);
 
 	font-family: var(--serif);
 	font-size: var(--step-1);
-	line-height: var(--text-lh);
+	line-height: var(--lh-3);
+}
+
+body > :last-child {
+	margin-block-start: auto;
 }
 
 main {
-	--stack-gap: var(--page-inner-gap);
-	margin-block: var(--page-inner-gap);
+	margin-block-start: var(--page-inner-gap);
 }
 
 h1,
 h2,
 h3 {
+	color: var(--primary-text);
 	font-weight: 700;
-	line-height: var(--heading-lh);
+}
+
+h2,
+h3 {
+	line-height: var(--lh-2);
+	letter-spacing: var(--ls-2);
 }
 
 h1 {
 	font-size: var(--step-4);
+	line-height: var(--lh-1);
+	letter-spacing: var(--ls-1);
 }
 
 h2 {
@@ -92,40 +69,40 @@ h3 {
 	font-size: var(--step-2);
 }
 
-:is(h1, h2, h3) + * {
-	--flow-space: 0.5em;
-}
-
 a {
 	color: currentColor;
 	text-decoration-color: var(--link-underline);
 	text-decoration-thickness: var(--underline-thickness);
-	text-underline-offset: 2px;
+	text-underline-offset: 4px;
 }
 
 a:where(:hover, :focus) {
-	color: var(--link-hover);
+	color: var(--link-text);
 	text-decoration-color: var(--link-underline-hover);
 }
 
 button,
 .btn {
 	padding: var(--button-padding-block) var(--button-padding-inline);
-	background-color: var(--text);
-	color: var(--bg);
+	background-color: var(--primary-text);
+	color: var(--primary-bg);
 	font-size: var(--step-0);
 	font-weight: 700;
 }
 
 button:where(:hover, :focus),
 .btn:where(:hover, :focus) {
-	background-color: var(--bg);
-	color: var(--text);
+	background-color: var(--primary-bg);
+	color: var(--primary-text);
 }
 
 ul,
 ol {
 	padding-inline-start: 1em;
+}
+
+:where(ul, ol)[role="list"] {
+	padding-inline-start: 0;
 }
 
 @supports (hanging-punctuation: first) {
@@ -138,8 +115,7 @@ input {
 	border: unset;
 	padding: var(--button-padding-block) var(--button-padding-inline);
 	font-size: var(--step-0);
-	background-color: var(--bg);
-	font-weight: 700;
+	background-color: var(--primary-bg);
 }
 
 label {
@@ -148,6 +124,12 @@ label {
 
 strong {
 	font-weight: 700;
+}
+
+hr {
+	all: unset;
+	inline-size: 100%;
+	border-block-start: var(--underline-thickness) solid var(--border-color);
 }
 
 [id] {

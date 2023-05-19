@@ -1,16 +1,15 @@
-<div class="site-head__inner switcher step-0 wrapper">
-  <div class="site-name-container">
-    <a href="/" aria-label="Home">{{ site.name }}</a>
+<header class="site-head">
+  <div class="site-head__inner cluster step-0 wrapper">
+    <a class="site-name" href="/" aria-label="Home">
+      Home
+    </a>
+    {# TODO: update link #}
+    <nav class="cluster">
+      <a href="#">Posts</a>
+      <a class="cluster" href="#">
+        {# {%- include "partials/search.html" -%} #}
+        Search
+      </a>
+    </nav>
   </div>
-  {# TODO: update link #}
-  <nav class="cluster">
-    <a class="cluster" href="#">
-      {%- include "partials/search.html" -%}
-      Search
-    </a>
-    <a class="cluster" href="#">
-      {%- include "partials/newspaper.html" -%}
-      Newspaper Articles
-    </a>
-  </nav>
-</div>
+</header>

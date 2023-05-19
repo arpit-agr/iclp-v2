@@ -1,0 +1,90 @@
+.post + aside {
+	margin-block-start: var(--page-inner-gap);
+}
+
+:where(.post + aside .subscription-form) .subscription-form__inner {
+	border-block-start: var(--underline-thickness) solid var(--border-color);
+}
+
+article {
+	--stack-gap: var(--page-inner-gap);
+}
+
+.meta-info {
+	--flow-space: 1em;
+	font-style: italic;
+	font-variant-numeric: oldstyle-nums;
+}
+
+.editors-note-container {
+	position: relative;
+	inline-size: 100%;
+}
+
+.editors-note-container summary {
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.editors-note-container:not([open]) summary {
+	padding-block: calc(0.5 * var(--page-gutter));
+	border-block: var(--underline-thickness) solid currentColor;
+}
+
+.editors-note-container[open] summary {
+	position: absolute;
+	inset-block-end: 100%;
+	padding-inline-end: 1ch;
+	background: var(--primary-bg);
+	translate: 0 50%;
+}
+
+.editors-note-container[open] summary::-webkit-details-marker,
+.editors-note-container[open] summary::marker {
+	content: "";
+	display: none;
+}
+
+.editors-note {
+	padding-block: var(--page-gutter);
+	border-block: var(--underline-thickness) solid currentColor;
+}
+
+.tag-list {
+	--cluster-horizontal-alignment: flex-end;
+	--cluster-gap: 0 0.5ch;
+	--flow-space: var(--page-inner-gap);
+	max-inline-size: 60ch;
+	margin-inline-start: auto;
+}
+
+.tag-list:before {
+	content: "Tagged with";
+}
+
+@supports (text-wrap: balance) {
+	:where(article) h1 {
+		text-wrap: balance;
+	}
+}
+
+:where(article) :is(h1, h2, h3, blockquote, blockquote + *) {
+	--flow-space: 1.5em;
+}
+
+@supports (initial-letter: 1 1) or (-webkit-initial-letter: 1 1) {
+	.prose::first-letter {
+		-webkit-initial-letter: 2 2;
+		initial-letter: 2 2;
+		margin-inline-end: 0.5ch;
+
+		color: var(--primary-text);
+		font-weight: 700;
+	}
+}
+
+:where(article) blockquote {
+	padding-inline-start: 1em;
+	border-inline-start: var(--underline-thickness) solid var(--border-color);
+	font-style: italic;
+}

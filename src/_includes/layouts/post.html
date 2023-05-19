@@ -1,0 +1,43 @@
+{%- extends "layouts/base.html" -%} 
+
+{%- block beforeMain -%}
+  {%- include "partials/header.html" -%}
+{%- endblock -%}
+
+{%- block content -%}
+  <main class="post" id="main" tabindex="-1">
+    <article class="stack wrapper">
+      <header class="flow">
+        <h1>{{ title }}</h1>
+        <p class="meta-info">
+          <span class="vh">Published by </span> 
+          <a href="#">{{ author }}</a> on
+          <time datetime={{ date | dump | safe }}>
+            {{ date | postDate }}
+          </time>
+        </p>
+      </header>
+      {% if editorsNote %}
+        <details class="editors-note-container" open>
+          <summary>Editor's Note</summary>
+          <p class="editors-note">{{ editorsNote }}</p>
+        </details>
+      {% endif %}
+      <section class="prose flow">
+        {{ content | safe }}
+        <ul class="tag-list cluster step-0" role="list">
+          {% for tag in tags %}
+            <li>
+              <a href="#">{{- tag -}}</a>{% if not loop.last %},{% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      </section>
+    </article>
+  </main>
+{%- endblock -%}
+  
+{%- block afterMain -%}
+  {%- include "partials/subscription-form.html" -%}
+  {%- include "partials/magna-carta-banner.html" -%}
+{%- endblock -%}

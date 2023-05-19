@@ -1,0 +1,47 @@
+.magna-carta-banner {
+	display: grid;
+	grid-template-areas: "content";
+	align-items: center;
+}
+
+.magna-carta-banner > * {
+	grid-area: content;
+}
+
+.magna-carta-banner img {
+	block-size: 100%;
+	inline-size: 100%;
+	object-fit: cover;
+	filter: contrast(1.5) grayscale(1) invert(var(--invert, 1));
+}
+
+@media (prefers-color-scheme: dark) {
+	.magna-carta-banner img {
+		--invert: 0;
+	}
+}
+
+.magna-carta-banner p {
+	padding-block: var(--page-inner-gap);
+	color: var(--primary-bg);
+	font-size: var(--space-xl-3xl);
+	line-height: var(--lh-1);
+	letter-spacing: var(--ls-1);
+	text-align: center;
+	font-weight: 700;
+	z-index: 1;
+
+	filter: url(#distort);
+}
+
+@supports (hanging-punctuation: first) {
+	.magna-carta-banner p {
+		padding-inline: var(--space-2xs-xs);
+	}
+}
+
+@supports (text-wrap: balance) {
+	.magna-carta-banner p {
+		text-wrap: balance;
+	}
+}

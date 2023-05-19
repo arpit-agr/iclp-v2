@@ -1,5 +1,46 @@
 {%- extends "layouts/base.html" -%}
 
+{%- block beforeMain -%}
+  <header>
+    <div class="wrapper">
+      <h1>
+        Indian Constitutional Law <i>&</i> Philosophy
+      </h1>
+    </div>
+  </header>
+{%- endblock -%}
+
 {%- block content -%}
-  {{ content | safe }}
+  <main class="home" id="main" tabindex="-1">
+    <section class="stack wrapper">
+      <div class="recent-posts-container flow">
+        <div class="heading-container">
+          <h2>Recent Posts</h2>
+        </div>
+        <ul class="recent-posts-list" role="list">
+          {%- for post in collections.posts | reverse -%}
+            <li>
+              <h3>
+                <a href="{{ post.url }}">
+                  {{ post.data.title | addNbsp | safe }}
+                </a>
+              </h3>
+              <div class="meta-info step-0">
+                <time datetime={{ post.date | dump | safe }}>
+                  {{ post.date | postDate }}
+                </time>
+                <span class="separator">|</span>
+                <p>{{ post.data.author }}</p>
+              </div>
+            </li>
+          {%- endfor -%}
+        </ul>
+      </div>
+    </section>
+  </main>
+{%- endblock -%}
+
+{%- block afterMain -%}
+  {%- include "partials/subscription-form.html" -%}
+  {%- include "partials/magna-carta-banner.html" -%}
 {%- endblock -%}

@@ -8,7 +8,6 @@
 	gap: var(--grid-gap);
 	align-items: flex-start;
 	padding-block: var(--page-inner-gap);
-	border-block-start: var(--underline-thickness) solid var(--section-separator);
 }
 
 @media (min-width: 48rem) {
@@ -24,6 +23,7 @@
 }
 
 .form-desc {
+	--flow-space: 0.5em;
 	max-inline-size: var(--line-length, 40ch);
 	font-size: var(--step-0);
 }
@@ -34,15 +34,10 @@
 
 :where(.subscription-form__inner) .with-sidebar {
 	max-inline-size: 40ch;
-	outline: var(--underline-thickness) solid var(--text);
+	outline: var(--underline-thickness) solid var(--primary-text);
 	border-radius: var(--border-radius);
 }
 
 :where(.subscription-form__inner) button {
-	border-inline-start: var(--underline-thickness) solid var(--text);
+	border-inline-start: var(--underline-thickness) solid var(--primary-text);
 }
-
-/* :where(.subscription-form__inner) input:valid + button {
-	background-color: var(--text);
-	color: var(--bg);
-} */
