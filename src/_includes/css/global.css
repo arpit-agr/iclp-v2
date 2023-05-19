@@ -2,7 +2,7 @@
 	/* space */
 	--max-page-width: 50rem;
 	--page-gutter: var(--space-s-m);
-	--page-inner-gap: var(--space-4xl);
+	--page-inner-gap: var(--space-3xl-4xl);
 	--nav-padding-block: var(--space-2xs);
 	--nav-padding-inline: var(--space-3xs-2xs);
 	--post-item-padding-block: var(--space-xs);
