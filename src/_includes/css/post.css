@@ -28,7 +28,7 @@ article {
 
 .editors-note-container:not([open]) summary {
 	padding-block: calc(0.5 * var(--page-gutter));
-	border-block: var(--underline-thickness) solid currentColor;
+	border-block: var(--underline-thickness) solid var(--link-underline);
 }
 
 .editors-note-container[open] summary {
@@ -47,7 +47,7 @@ article {
 
 .editors-note {
 	padding-block: var(--page-gutter);
-	border-block: var(--underline-thickness) solid currentColor;
+	border-block: var(--underline-thickness) solid var(--link-underline);
 }
 
 .tag-list {
