@@ -1,6 +1,6 @@
 .subscription-form__inner {
-	--row-grid-gap: var(--space-xl);
-	--column-grid-gap: var(--space-4xl);
+	--row-grid-gap: var(--space-2xs);
+	--column-grid-gap: var(--page-inner-gap);
 	--grid-gap: var(--row-grid-gap) var(--column-grid-gap);
 
 	display: grid;
