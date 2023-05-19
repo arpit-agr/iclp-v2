@@ -22,6 +22,8 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addCollection("posts", function (collectionApi) {
 		return collectionApi.getFilteredByGlob("src/posts/*.md");
 	});
+
+	//cssmin Filter
 	eleventyConfig.addFilter("cssmin", function (code) {
 		if (process.env.NODE_ENV === "production") {
 			return new CleanCSS({}).minify(code).styles;
@@ -29,8 +31,32 @@ module.exports = function (eleventyConfig) {
 			return code;
 		}
 	});
+
+	//postDate Filter
 	eleventyConfig.addFilter("postDate", (dateObj) => {
 		return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
+	});
+
+	//addNbsp Filter
+	eleventyConfig.addFilter("addNbsp", (str) => {
+		if (!str) {
+			return;
+		}
+		let title = str.replace(/((.*)\s(.*))$/g, "$2&nbsp;$3");
+		title = title.replace(/"(.*)"/g, '\\"$1\\"');
+		return title;
+	});
+
+	//addNbsp filter for last three words
+	eleventyConfig.addFilter("addNbspLastThreeWords", (str) => {
+		if (!str) {
+			return;
+		}
+		let words = str.split(" ");
+		let lastThreeWords = words.slice(-3);
+		let modifiedLastThreeWords = lastThreeWords.join("&nbsp;");
+		let result = str.replace(lastThreeWords.join(" "), modifiedLastThreeWords);
+		return result;
 	});
 
 	//Transforms
@@ -54,8 +80,6 @@ module.exports = function (eleventyConfig) {
 	});
 
 	return {
-		// dataTemplateEngine: "njk",
-		markdownTemplateEngine: "njk",
 		htmlTemplateEngine: "njk",
 		dir: {
 			input: "src",
