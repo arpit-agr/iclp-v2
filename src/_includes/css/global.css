@@ -5,7 +5,7 @@
 	--page-inner-gap: var(--space-4xl);
 	--nav-padding-block: var(--space-2xs);
 	--nav-padding-inline: var(--space-3xs-2xs);
-	--post-item-padding-block: var(--space-xs);
+	--post-item-padding-block: var(--space-m);
 	--button-padding-block: 1ex;
 	--button-padding-inline: 1ch;
 
