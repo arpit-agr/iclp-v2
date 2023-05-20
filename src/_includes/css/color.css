@@ -1,8 +1,8 @@
 :root {
 	--hue: 25;
 
-	/* --gray-chroma: 0.006;
-	--gray-hue: var(--hue); */
+	--gray-chroma: 0.006;
+	--gray-hue: var(--hue);
 
 	--gray-0: oklch(99% var(--gray-chroma, none) var(--gray-hue, none));
 	--gray-1: oklch(95% var(--gray-chroma, none) var(--gray-hue, none));
@@ -38,9 +38,6 @@
 	--red-14: oklch(14% 0.07 var(--hue, 0));
 	--red-15: oklch(11% 0.05 var(--hue, 0));
 	--red-bright: oklch(65% 0.3 var(--hue, 0));
-
-	--accent-dark: oklch(35% 0.15 var(--hue, 0));
-	--accent-light: var(--gray-2);
 }
 
 :root {
@@ -60,6 +57,9 @@
 
 @media (prefers-color-scheme: dark) {
 	:root {
+		--hue: 215.59;
+		--turquoise: oklch(69% 0.09 var(--hue));
+
 		--primary-text: var(--gray-2);
 		--secondary-text: var(--gray-3);
 
@@ -67,8 +67,8 @@
 		--secondary-bg: var(--gray-13);
 		--tertiary-bg: var(--gray-12);
 
-		--link-text: var(--gray-2);
+		--link-text: var(--turquoise);
 		--link-underline: var(--gray-9);
-		--link-underline-hover: var(--gray-4);
+		--link-underline-hover: var(--turquoise);
 	}
 }
