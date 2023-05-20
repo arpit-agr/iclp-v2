@@ -2,7 +2,7 @@
 	/* space */
 	--max-page-width: 50rem;
 	--page-gutter: var(--space-s-m);
-	--page-inner-gap: var(--space-3xl-4xl);
+	--page-inner-gap: var(--space-4xl);
 	--nav-padding-block: var(--space-2xs);
 	--nav-padding-inline: var(--space-3xs-2xs);
 	--post-item-padding-block: var(--space-xs);
@@ -22,11 +22,50 @@
 	--border-radius: 1px;
 }
 
+:root {
+	--body-bg: linear-gradient(
+			180deg,
+			rgba(255, 128, 0, 0.033),
+			3em,
+			rgba(255, 216, 0, 0) 33em
+		),
+		linear-gradient(
+				90deg,
+				hsla(calc(var(--hue) * 1deg), 0%, 96%, 0.98) 5%,
+				10%,
+				hsla(calc(var(--hue) * 1deg), 38%, 99%, 0.95) 25%,
+				33%,
+				hsla(calc(var(--hue) * 1deg), 38%, 99%, 1) 50%,
+				67%,
+				hsla(calc(var(--hue) * 1deg), 38%, 99%, 0.975) 75%,
+				90%,
+				hsla(calc(var(--hue) * 1deg), 0%, 96%, 0.98) 95%
+			)
+			0 0 / 100% 100% no-repeat,
+		linear-gradient(
+			179deg,
+			hsla(calc(var(--hue) * 1deg), 38%, 99%, 1) 11em,
+			hsla(calc(var(--hue) * 1deg), 38%, 99%, 0) 13em
+		),
+		linear-gradient(
+			0deg,
+			hsla(calc(var(--hue) * 1deg), 38%, 99%, 1) 23em,
+			hsla(calc(var(--hue) * 1deg), 38%, 99%, 0) 42em
+		),
+		hsla(calc(var(--hue) * 1deg), 38%, 99%, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--body-bg: var(--primary-bg);
+	}
+}
+
 body {
 	display: flex;
 	flex-direction: column;
 
-	background-color: var(--primary-bg);
+	background: var(--body-bg);
 	color: var(--secondary-text);
 
 	font-family: var(--serif);

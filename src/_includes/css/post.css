@@ -62,8 +62,13 @@ article {
 	content: "Tagged with";
 }
 
+:where(article) :is(h2, h3) {
+	max-inline-size: 37ch;
+}
+
 @supports (text-wrap: balance) {
-	:where(article) h1 {
+	:where(article) :is(h1, h2, h3) {
+		max-inline-size: unset;
 		text-wrap: balance;
 	}
 }
