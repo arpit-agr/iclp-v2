@@ -1,6 +1,5 @@
 const directoryOutputPlugin = require("@11ty/eleventy-plugin-directory-output");
 const htmlmin = require("html-minifier");
-const CleanCSS = require("clean-css");
 const { DateTime } = require("luxon");
 
 module.exports = function (eleventyConfig) {
@@ -21,15 +20,6 @@ module.exports = function (eleventyConfig) {
 	//Collections
 	eleventyConfig.addCollection("posts", function (collectionApi) {
 		return collectionApi.getFilteredByGlob("src/posts/*.md");
-	});
-
-	//cssmin Filter
-	eleventyConfig.addFilter("cssmin", function (code) {
-		if (process.env.NODE_ENV === "production") {
-			return new CleanCSS({}).minify(code).styles;
-		} else {
-			return code;
-		}
 	});
 
 	//postDate Filter
@@ -71,7 +61,9 @@ module.exports = function (eleventyConfig) {
 				useShortDoctype: false,
 				removeComments: true,
 				collapseWhitespace: true,
+				preserveLineBreaks: true,
 				collapseBooleanAttributes: true,
+				minifyCSS: true,
 			});
 			return minified;
 		}
