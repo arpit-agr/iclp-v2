@@ -12,9 +12,14 @@
   {%- block injectHead -%}{%- endblock -%}
   <!-- meta information -->
   {%- include "partials/meta.html" -%}
+  <meta name="view-transition" content="same-origin" />
 </head>
 <body>
   <a href="#main" class="skip-to-main btn">Skip to content</a>
+
+  <header class="site-head stack">
+    {% include "partials/site-header.html" %}
+  </header>
   
   {%- block beforeMain -%}{%- endblock -%}
   
