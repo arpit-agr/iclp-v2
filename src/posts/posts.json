@@ -1,4 +1,4 @@
 {
 	"layout": "layouts/post.html",
-	"permalink": "/{{ page.date | date: '%Y/%m/%d' }}/{{ title | slugify }}/"
+	"permalink": "/{{ page.date | liquidate }}/{{ title | slugify }}/"
 }
