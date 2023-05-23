@@ -1,5 +1,5 @@
 .subscription-form__inner {
-	--row-grid-gap: var(--space-2xs);
+	--row-grid-gap: 0.5em;
 	--column-grid-gap: var(--page-inner-gap);
 	--grid-gap: var(--row-grid-gap) var(--column-grid-gap);
 
@@ -8,6 +8,10 @@
 	gap: var(--grid-gap);
 	align-items: flex-start;
 	padding-block: var(--page-inner-gap);
+}
+
+.post + aside .subscription-form__inner {
+	border-block-start: var(--underline-thickness) solid var(--border-color);
 }
 
 @media (min-width: 48rem) {
@@ -40,4 +44,5 @@
 
 :where(.subscription-form__inner) button {
 	border-inline-start: var(--underline-thickness) solid var(--primary-text);
+	border-radius: 0 var(--border-radius) var(--border-radius) 0;
 }
