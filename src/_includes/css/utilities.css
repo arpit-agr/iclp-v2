@@ -74,6 +74,11 @@ the component switches between a horizontal and vertical layout */
 	letter-spacing: 0.03em;
 }
 
+.all-small-caps {
+	font-variant-caps: all-small-caps;
+	/* letter-spacing: var(--ls-1); */
+}
+
 .vh {
 	position: absolute;
 	inline-size: 1px;
