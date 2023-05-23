@@ -8,32 +8,35 @@
         <p class="meta-info">
           <span class="vh">Published by </span> 
           <a href="#">{{ author }}</a> on
-          <time datetime={{ date | dump | safe }}>
-            {{ date | postDate }}
+          <time datetime={{ date | htmlDate }}>
+            {{ date | readableDate | safe }}
           </time>
         </p>
       </header>
       {% if editorsNote %}
         <details class="editors-note-container" open>
-          <summary>Editor's Note</summary>
-          <p class="editors-note">{{ editorsNote }}</p>
+          <summary class="all-small-caps">Editor's Note</summary>
+          <div class="editors-note">{{ editorsNote | md | safe }}</>
         </details>
       {% endif %}
       <section class="prose flow">
         {{ content | safe }}
-        <ul class="tag-list cluster step-0" role="list">
-          {% for tag in tags %}
-            <li>
-              <a href="#">{{- tag -}}</a>{% if not loop.last %},{% endif %}
-            </li>
-          {% endfor %}
-        </ul>
       </section>
+      <p class="tag-list step-0">
+        Tagged in 
+        {% for tag in tags %}
+          {% if not loop.last %}
+            <span>
+              <a href="#">{{- tag | replace("-", " ") -}}</a>
+              <span>,</span>
+            </span>
+          {% else %}
+            <span>
+              <a href="#">{{- tag | replace("-", " ") -}}</a>
+            </span>
+          {% endif %}
+        {% endfor %}
+      </p>
     </article>
   </main>
-{%- endblock -%}
-  
-{%- block afterMain -%}
-  {%- include "partials/subscription-form.html" -%}
-  {%- include "partials/magna-carta-banner.html" -%}
 {%- endblock -%}

@@ -20,15 +20,14 @@
   <header class="site-head stack">
     {% include "partials/site-header.html" %}
   </header>
-  
-  {%- block beforeMain -%}{%- endblock -%}
-  
+    
   {%- block content -%}
     This page is under maintenance.
   {%- endblock -%}
-
+  
   <aside>
-    {%- block afterMain -%}{%- endblock -%}
+    {%- include "partials/subscription-form.html" -%}
+    {%- include "partials/magna-carta-banner.html" -%}
   </aside>
     
   {# <footer role="contentinfo"></footer> #}
