@@ -2,27 +2,32 @@
 	margin-block-start: var(--page-inner-gap);
 }
 
-:where(.post + aside .subscription-form) .subscription-form__inner {
-	border-block-start: var(--underline-thickness) solid var(--border-color);
-}
-
-article {
+.post article {
 	--stack-gap: var(--page-inner-gap);
 }
 
-.meta-info {
-	--flow-space: 1em;
+:where(.post) a {
+	display: inline;
+}
+
+.post .meta-info {
 	font-style: italic;
-	font-variant-numeric: oldstyle-nums;
 }
 
 .editors-note-container {
+	--editors-note-font-size: var(--step-0);
 	position: relative;
 	inline-size: 100%;
 }
 
+.editors-note-container[open] {
+	padding-block-start: calc(var(--editors-note-font-size) * 0.5 * var(--lh-3));
+}
+
 .editors-note-container summary {
-	font-weight: 700;
+	color: var(--primary-text);
+	font-size: var(--editors-note-font-size);
+	/* font-weight: var(--bold); */
 	cursor: pointer;
 }
 
@@ -33,9 +38,11 @@ article {
 
 .editors-note-container[open] summary {
 	position: absolute;
-	inset-block-end: 100%;
-	padding-inline-end: 1ch;
-	background: var(--primary-bg);
+	inset-block-end: calc(100% - (1em * (0.5 * var(--lh-3))));
+	padding-inline: 1ch;
+	border-radius: var(--border-radius);
+	background: var(--primary-text);
+	color: var(--primary-bg);
 	translate: 0 50%;
 }
 
@@ -46,34 +53,40 @@ article {
 }
 
 .editors-note {
-	padding-block: var(--page-gutter);
+	padding-block: var(--space-m);
 	border-block: var(--underline-thickness) solid var(--link-underline);
 }
 
 .tag-list {
-	--cluster-horizontal-alignment: flex-end;
-	--cluster-gap: 0 0.5ch;
-	--flow-space: var(--page-inner-gap);
 	max-inline-size: 60ch;
 	margin-inline-start: auto;
+	text-align: end;
 }
 
-.tag-list:before {
-	content: "Tagged with";
+.tag-list > span {
+	display: inline-flex;
+	gap: 0;
+	flex-wrap: nowrap;
+	align-items: flex-end;
+	text-align: end;
 }
 
-:where(article) :is(h2, h3) {
-	max-inline-size: 37ch;
+:where(.prose) :is(h2, h3) {
+	max-inline-size: 50ch;
 }
 
 @supports (text-wrap: balance) {
-	:where(article) :is(h1, h2, h3) {
+	:where(.post article) :is(h1, h2, h3) {
 		max-inline-size: unset;
+		text-wrap: balance;
+	}
+
+	.tag-list {
 		text-wrap: balance;
 	}
 }
 
-:where(article) :is(h1, h2, h3, blockquote, blockquote + *) {
+:where(.post article) :is(h1, h2, h3, blockquote, blockquote + *) {
 	--flow-space: 1.5em;
 }
 
@@ -84,12 +97,16 @@ article {
 		margin-inline-end: 0.5ch;
 
 		color: var(--primary-text);
-		font-weight: 700;
+		font-weight: var(--bold);
 	}
 }
 
-:where(article) blockquote {
+:where(.prose) blockquote {
 	padding-inline-start: 1em;
 	border-inline-start: var(--underline-thickness) solid var(--border-color);
 	font-style: italic;
+}
+
+:where(.prose) :is(ul, ol) > li + li {
+	margin-block-start: var(--space-2xs);
 }
