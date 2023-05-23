@@ -1,6 +1,6 @@
 :root {
 	/* space */
-	--max-page-width: 50rem;
+	--max-page-width: 48rem;
 	--page-gutter: var(--space-s-m);
 	--page-inner-gap: var(--space-4xl);
 	--nav-padding-block: var(--space-2xs);
