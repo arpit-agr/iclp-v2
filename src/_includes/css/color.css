@@ -1,7 +1,7 @@
 :root {
-	--hue: 25;
+	--hue: 0;
 
-	--gray-chroma: 0.006;
+	/* --gray-chroma: 0.006; */
 	--gray-hue: var(--hue);
 
 	--gray-0: oklch(99% var(--gray-chroma, none) var(--gray-hue, none));
@@ -21,7 +21,7 @@
 	--gray-14: oklch(18% var(--gray-chroma, none) var(--gray-hue, none));
 	--gray-15: oklch(10% var(--gray-chroma, none) var(--gray-hue, none));
 
-	--red-0: oklch(99% 0.03 var(--hue, 0));
+	/* --red-0: oklch(99% 0.03 var(--hue, 0));
 	--red-1: oklch(95% 0.06 var(--hue, 0));
 	--red-2: oklch(88% 0.12 var(--hue, 0));
 	--red-3: oklch(80% 0.14 var(--hue, 0));
@@ -37,7 +37,9 @@
 	--red-13: oklch(20% 0.09 var(--hue, 0));
 	--red-14: oklch(14% 0.07 var(--hue, 0));
 	--red-15: oklch(11% 0.05 var(--hue, 0));
-	--red-bright: oklch(65% 0.3 var(--hue, 0));
+	--red-bright: oklch(65% 0.3 var(--hue, 0)); */
+
+	--accent: oklch(42% 0.17 var(--hue, 0));
 }
 
 :root {
@@ -48,9 +50,9 @@
 	--secondary-bg: var(--gray-1);
 	--tertiary-bg: var(--gray-2);
 
-	--link-text: var(--red-11);
+	--link-text: var(--accent);
 	--link-underline: var(--gray-6);
-	--link-underline-hover: var(--red-10);
+	--link-underline-hover: var(--accent);
 
 	--border-color: color-mix(in lch, var(--primary-text), transparent 90%);
 }
@@ -58,7 +60,8 @@
 @media (prefers-color-scheme: dark) {
 	:root {
 		--hue: 215.59;
-		--turquoise: oklch(69% 0.09 var(--hue));
+		--gray-chroma: 0.006;
+		--accent: oklch(69% 0.09 var(--hue));
 
 		--primary-text: var(--gray-2);
 		--secondary-text: var(--gray-3);
@@ -67,8 +70,6 @@
 		--secondary-bg: var(--gray-13);
 		--tertiary-bg: var(--gray-12);
 
-		--link-text: var(--turquoise);
 		--link-underline: var(--gray-9);
-		--link-underline-hover: var(--turquoise);
 	}
 }
