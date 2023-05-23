@@ -11,32 +11,30 @@
 
 {%- block content -%}
   <main class="home" id="main" tabindex="-1">
-    <section class="stack wrapper">
-      <div class="posts-container flow">
-        <div class="heading-container">
-          <h2 class="all-small-caps">Recent Posts</h2>
-        </div>
-        <ul class="posts-list" role="list">
-          {% set postsList = collections.posts | reverse %}
-          {%- for post in postsList.slice(0, 4) -%}
-            <li>
-              <h3>
-                <a href="{{ post.url }}">
-                  {{ post.data.title | addNbsp | safe }}
-                </a>
-              </h3>
-              <div class="meta-info step-0">
-                <time datetime={{ post.date | htmlDate }}>
-                  {{ post.date | readableDate | safe }}
-                </time>
-                <span class="separator">|</span>
-                <p>{{ post.data.author }}</p>
-              </div>
-            </li>
-          {%- endfor -%}
-        </ul>
-        <a class="all-posts btn" href="/archive/">View All Posts</a>
+    <section class="posts-container flow wrapper">
+      <div class="heading-container">
+        <h2 class="all-small-caps">Recent Posts</h2>
       </div>
+      <ul class="posts-list" role="list">
+        {% set postsList = collections.posts | reverse %}
+        {%- for post in postsList.slice(0, 4) -%}
+          <li>
+            <h3>
+              <a href="{{ post.url }}">
+                {{ post.data.title | addNbsp | safe }}
+              </a>
+            </h3>
+            <div class="meta-info cluster step-0">
+              <time datetime={{ post.date | htmlDate }}>
+                {{ post.date | readableDate | safe }}
+              </time>
+              <span class="separator">|</span>
+              <p>{{ post.data.author }}</p>
+            </div>
+          </li>
+        {%- endfor -%}
+      </ul>
+      <a class="all-posts btn" href="/archive/">View All Posts</a>
     </section>
   </main>
 {%- endblock -%}
