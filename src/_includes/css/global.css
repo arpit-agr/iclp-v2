@@ -13,8 +13,10 @@
 	--serif: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052, serif;
 	--sans-serif: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
 		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	--bold: 700;
 	--ls-1: -0.03em;
 	--ls-2: -0.015em;
+	--lh-0: 1;
 	--lh-1: 1.1;
 	--lh-2: 1.3425;
 	--lh-3: 1.585;
@@ -85,7 +87,7 @@ h1,
 h2,
 h3 {
 	color: var(--primary-text);
-	font-weight: 700;
+	font-weight: var(--bold);
 }
 
 h2,
@@ -109,10 +111,11 @@ h3 {
 }
 
 a {
+	display: inline-block;
 	color: currentColor;
 	text-decoration-color: var(--link-underline);
 	text-decoration-thickness: var(--underline-thickness);
-	text-underline-offset: 4px;
+	text-underline-offset: 0.2em;
 }
 
 a:where(:hover, :focus) {
@@ -123,16 +126,18 @@ a:where(:hover, :focus) {
 button,
 .btn {
 	padding: var(--button-padding-block) var(--button-padding-inline);
-	background-color: var(--primary-text);
-	color: var(--primary-bg);
+	background-color: var(--btn-bg, var(--primary-text));
+	border-radius: var(--border-radius);
+	color: var(--btn-color, var(--primary-bg));
 	font-size: var(--step-0);
-	font-weight: 700;
+	font-weight: var(--bold);
+	text-decoration: none;
 }
 
 button:where(:hover, :focus),
 .btn:where(:hover, :focus) {
-	background-color: var(--primary-bg);
-	color: var(--primary-text);
+	--btn-bg: var(--primary-bg);
+	--btn-color: var(--primary-text);
 }
 
 ul,
@@ -154,15 +159,11 @@ input {
 	border: unset;
 	padding: var(--button-padding-block) var(--button-padding-inline);
 	font-size: var(--step-0);
-	background-color: var(--primary-bg);
-}
-
-label {
-	font-weight: 700;
+	background-color: transparent;
 }
 
 strong {
-	font-weight: 700;
+	font-weight: var(--bold);
 }
 
 hr {
