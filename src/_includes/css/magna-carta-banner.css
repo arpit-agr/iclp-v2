@@ -12,13 +12,8 @@
 	block-size: 100%;
 	inline-size: 100%;
 	object-fit: cover;
-	filter: contrast(1.5) grayscale(1) invert(var(--invert, 1));
-}
-
-@media (prefers-color-scheme: dark) {
-	.magna-carta-banner img {
-		--invert: 0;
-	}
+	filter: contrast(1.5) grayscale(1) invert(1);
+	mix-blend-mode: hard-light;
 }
 
 .magna-carta-banner p {
@@ -28,10 +23,20 @@
 	line-height: var(--lh-1);
 	letter-spacing: var(--ls-1);
 	text-align: center;
-	font-weight: 700;
+	font-weight: var(--bold);
 	z-index: 1;
 
 	filter: url(#distort);
+}
+
+@media (prefers-color-scheme: dark) {
+	.magna-carta-banner img {
+		mix-blend-mode: unset;
+	}
+
+	.magna-carta-banner p {
+		color: var(--primary-text);
+	}
 }
 
 @supports (hanging-punctuation: first) {
