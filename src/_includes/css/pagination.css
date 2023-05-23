@@ -1,0 +1,10 @@
+.pagination {
+	--flow-space: 0;
+	min-inline-size: 100%;
+	padding-block-start: var(--page-gutter);
+	border-block-start: var(--underline-thickness) solid var(--border-color);
+}
+
+.pagination [data-direction="forwards"] {
+	margin-inline-start: auto;
+}

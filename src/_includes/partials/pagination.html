@@ -1,0 +1,20 @@
+<nav class="pagination cluster" aria-label="Select page">
+  {% if pagination.href.previous %}
+    <a
+      href="{{ pagination.href.previous }}"
+      data-direction="backwards"
+    >
+      <span aria-hidden="true">←</span> 
+      Newer notes
+    </a>
+  {% endif %}
+  {% if pagination.href.next %}
+    <a
+      href="{{ pagination.href.next }}"
+      data-direction="forwards"
+    >
+      Older notes 
+      <span aria-hidden="true">→</span>
+    </a>
+  {% endif %}
+</nav>
