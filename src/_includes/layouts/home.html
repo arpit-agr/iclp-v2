@@ -1,24 +1,24 @@
 {%- extends "layouts/base.html" -%}
 
 {%- block beforeMain -%}
-  <header>
-    <div class="wrapper">
-      <h1>
-        Indian Constitutional Law <i>&</i> Philosophy
-      </h1>
-    </div>
+  <header class="site-head stack">
+    {% include "partials/site-header.html" %}
+    <h1 class="site-title wrapper">
+      <a href="/">Indian Constitutional Law <i>&</i> Philosophy</a>
+    </h1>
   </header>
 {%- endblock -%}
 
 {%- block content -%}
   <main class="home" id="main" tabindex="-1">
     <section class="stack wrapper">
-      <div class="recent-posts-container flow">
+      <div class="posts-container flow">
         <div class="heading-container">
-          <h2>Recent Posts</h2>
+          <h2 class="all-small-caps">Recent Posts</h2>
         </div>
-        <ul class="recent-posts-list" role="list">
-          {%- for post in collections.posts | reverse -%}
+        <ul class="posts-list" role="list">
+          {% set postsList = collections.posts | reverse %}
+          {%- for post in postsList.slice(0, 4) -%}
             <li>
               <h3>
                 <a href="{{ post.url }}">
@@ -26,8 +26,8 @@
                 </a>
               </h3>
               <div class="meta-info step-0">
-                <time datetime={{ post.date | dump | safe }}>
-                  {{ post.date | postDate }}
+                <time datetime={{ post.date | htmlDate }}>
+                  {{ post.date | readableDate | safe }}
                 </time>
                 <span class="separator">|</span>
                 <p>{{ post.data.author }}</p>
@@ -35,6 +35,7 @@
             </li>
           {%- endfor -%}
         </ul>
+        <a class="all-posts btn" href="/archive/">View All Posts</a>
       </div>
     </section>
   </main>
