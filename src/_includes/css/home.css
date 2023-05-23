@@ -1,10 +1,11 @@
 .all-posts {
+	--btn-bg: var(--border-color);
+	--btn-color: var(--primary-text);
 	inline-size: 100%;
 	text-align: center;
 }
 
 .all-posts:where(:hover, :focus) {
-	--btn-bg: transparent;
+	--btn-bg: var(--tertiary-bg);
 	--btn-color: var(--primary-text);
-	outline: var(--underline-thickness) solid currentColor;
 }

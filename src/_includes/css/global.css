@@ -116,6 +116,7 @@ a {
 	text-decoration-color: var(--link-underline);
 	text-decoration-thickness: var(--underline-thickness);
 	text-underline-offset: 0.2em;
+	transition: all 200ms;
 }
 
 a:where(:hover, :focus) {
