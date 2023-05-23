@@ -10,7 +10,7 @@ const {
 	addNbsp,
 	addNbspLastThreeWords,
 } = require("./config/filters/addNbsp.js");
-const htmlmin = require("./config/transforms/htmlMin.js");
+const htmlmin = require("./config/transforms/html-min.js");
 
 module.exports = function (eleventyConfig) {
 	//Add Collections
