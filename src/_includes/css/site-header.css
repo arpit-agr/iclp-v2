@@ -29,7 +29,7 @@
 	inset-inline-start: auto;
 	inset-inline-end: var(--nav-padding-inline);
 	inline-size: 0%;
-	transition: all 0.4s ease;
+	transition: all var(--transition-duration) var(--transition-timing-function);
 
 	block-size: var(--underline-thickness);
 }

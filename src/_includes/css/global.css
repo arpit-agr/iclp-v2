@@ -22,6 +22,10 @@
 	--lh-3: 1.585;
 	--underline-thickness: 1px;
 	--border-radius: 1px;
+
+	/* transition */
+	--transition-duration: 300ms;
+	--transition-timing-function: ease;
 }
 
 :root {
@@ -116,7 +120,7 @@ a {
 	text-decoration-color: var(--link-underline);
 	text-decoration-thickness: var(--underline-thickness);
 	text-underline-offset: 0.2em;
-	transition: all 200ms;
+	transition: all var(--transition-duration) var(--transition-timing-function);
 }
 
 a:where(:hover, :focus) {
