@@ -53,23 +53,23 @@
 	--link-text: var(--accent);
 	--link-underline: var(--gray-6);
 	--link-underline-hover: var(--accent);
-
-	--border-color: color-mix(in lch, var(--primary-text), transparent 90%);
+	--border-color: oklch(92% var(--gray-chroma, none) var(--gray-hue, none));
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
 		--hue: 215.59;
-		--gray-chroma: 0.006;
-		--accent: oklch(69% 0.09 var(--hue));
+		/* --gray-chroma: 0.006; */
+		--accent: oklch(69% 0.06 var(--hue));
 
-		--primary-text: var(--gray-2);
-		--secondary-text: var(--gray-3);
+		--primary-text: var(--gray-3);
+		--secondary-text: var(--gray-4);
 
 		--primary-bg: var(--gray-14);
 		--secondary-bg: var(--gray-13);
 		--tertiary-bg: var(--gray-12);
 
 		--link-underline: var(--gray-9);
+		--border-color: oklch(26% var(--gray-chroma, none) var(--gray-hue, none));
 	}
 }
