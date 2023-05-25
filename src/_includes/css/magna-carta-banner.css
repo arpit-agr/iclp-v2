@@ -8,9 +8,12 @@
 	grid-area: content;
 }
 
-.magna-carta-banner img {
+.magna-carta-banner :where(picture, img) {
 	block-size: 100%;
 	inline-size: 100%;
+}
+
+.magna-carta-banner img {
 	object-fit: cover;
 	filter: contrast(1.5) grayscale(1) invert(1);
 	mix-blend-mode: hard-light;

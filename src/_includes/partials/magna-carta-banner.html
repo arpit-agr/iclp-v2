@@ -1,6 +1,11 @@
+{%- set source = "src/assets/images/" + banner.image -%}
+{%- set alt = "" -%}
+{%- set sizes = "100vw" -%}
+{%- set loading = "lazy" -%}
+{%- set fetchPriority = "low" -%}
+
 <section class="magna-carta-banner">
-  {# TODO: use picture element #}
-  <img src="/images/{{ banner.image }}" alt="" width="1805" height="250">
+  {% image source , alt, sizes, loading, fetchPriority %}
   <blockquote class="wrapper">
     <p>
       {{ banner.text }}

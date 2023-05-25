@@ -11,8 +11,20 @@
   {%- include "css/styles.njk" -%}
 
   <!-- preload scripts and fonts -->
-  <link rel="preload" href="/fonts/Sentient-Variable.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="preload" href="/fonts/Sentient-VariableItalic.woff2" as="font" type="font/woff2" crossorigin="">
+  <link
+    rel="preload"
+    href="/fonts/Sentient-Variable.woff2?{{ assetHash }}"
+    as="font"
+    type="font/woff2"
+    crossorigin=""
+  >
+  <link
+    rel="preload"
+    href="/fonts/Sentient-VariableItalic.woff2?{{ assetHash }}"
+    as="font"
+    type="font/woff2"
+    crossorigin=""
+  >
 
   <!-- named block to inject elements from layout files -->
   {%- block injectHead -%}{%- endblock -%}

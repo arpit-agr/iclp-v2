@@ -10,6 +10,8 @@ const {
 	addNbsp,
 	addNbspLastThreeWords,
 } = require("./config/filters/addNbsp.js");
+const imageShortcode = require("./config/shortcodes/image.js");
+const assetHash = require("./config/plugins/asset-hash.js");
 const htmlmin = require("./config/transforms/html-min.js");
 
 module.exports = function (eleventyConfig) {
@@ -36,8 +38,12 @@ module.exports = function (eleventyConfig) {
 
 	//Add Plugins
 	eleventyConfig.addPlugin(htmlmin);
+	eleventyConfig.addPlugin(assetHash);
 	eleventyConfig.addPlugin(directoryOutputPlugin);
 	eleventyConfig.addPlugin(EleventyRenderPlugin);
+
+	//Shortcode
+	eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
 
 	//Passthrough copy
 	eleventyConfig.addPassthroughCopy({ "./src/assets/images": "/images/" });
