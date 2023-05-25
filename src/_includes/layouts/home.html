@@ -18,13 +18,15 @@
                 {{ post.data.title | addNbsp | safe }}
               </a>
             </h3>
-            <div class="meta-info cluster step-0 secondary-text">
-              <time datetime={{ post.date | htmlDate }}>
-                {{ post.date | readableDate | safe }}
-              </time>
-              <span class="separator">•</span>
-              <p>{{ post.data.author }}</p>
-            </div>
+            <time
+              class="step-0 secondary-text"
+              datetime={{ post.date | htmlDate }}
+            >
+              <span class="only-date">{{ post.date | onlyDate }}</span>
+              <span>{{ post.date | onlyMonthYear }}</span>
+            </time>
+            <span class="separator">•</span>
+            <span class="step-0 secondary-text">{{ post.data.author }}</span>
           </li>
         {%- endfor -%}
       </ul>

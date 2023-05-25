@@ -35,6 +35,26 @@ module.exports = function (eleventyConfig) {
 			return await content;
 		}
 	);
+	eleventyConfig.addAsyncFilter(
+		"onlyDate",
+		async function (date, format = "%d") {
+			const content = eleventyConfig.javascriptFunctions.renderTemplate(
+				`{{ "${date}" | date: "${format}" }}`,
+				"liquid"
+			);
+			return await content;
+		}
+	);
+	eleventyConfig.addAsyncFilter(
+		"onlyMonthYear",
+		async function (date, format = "%b, %Y") {
+			const content = eleventyConfig.javascriptFunctions.renderTemplate(
+				`{{ "${date}" | date: "${format}" }}`,
+				"liquid"
+			);
+			return await content;
+		}
+	);
 
 	//Add Plugins
 	eleventyConfig.addPlugin(htmlmin);

@@ -6,9 +6,7 @@
       <div class="heading-container cluster secondary-text step--1">
         <h2>All Posts</h2>
         <p class="page-number">
-          <span class="">p.</span>
-          0{{- pagination.pageNumber + 1 -}}
-          {# <span class="step--1">/0{{pagination.hrefs.length}}</span> #}
+          {{- pagination.pageNumber + 1 }} of {{pagination.hrefs.length}}
         </p>
       </div>
       <ul class="posts-list" role="list">
@@ -19,13 +17,15 @@
                 {{ post.data.title | addNbsp | safe }}
               </a>
             </h3>
-            <div class="meta-info cluster step-0 secondary-text">
-              <time datetime={{ post.date | htmlDate }}>
-                {{ post.date | readableDate | safe }}
-              </time>
-              <span class="separator">•</span>
-              <p>{{ post.data.author }}</p>
-            </div>
+            <time
+              class="step-0 secondary-text"
+              datetime={{ post.date | htmlDate }}
+            >
+              <span class="only-date">{{ post.date | onlyDate }}</span>
+              <span>{{ post.date | onlyMonthYear }}</span>
+            </time>
+            <span class="separator">•</span>
+            <span class="step-0 secondary-text">{{ post.data.author }}</span>
           </li>
         {%- endfor -%}
       </ul>
