@@ -1,5 +1,5 @@
 ---
-title: "Archive"
+title: "Post Archive"
 
 pagination:
   data: collections.posts

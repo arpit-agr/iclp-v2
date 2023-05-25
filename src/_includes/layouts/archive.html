@@ -3,8 +3,13 @@
 {%- block content -%}
   <main class="archive" id="main" tabindex="-1">
     <section class="posts-container flow wrapper">
-      <div class="heading-container">
-        <h2 class="all-small-caps">All Posts</h2>
+      <div class="heading-container cluster secondary-text step--1">
+        <h2>All Posts</h2>
+        <p class="page-number">
+          <span class="">p.</span>
+          0{{- pagination.pageNumber + 1 -}}
+          {# <span class="step--1">/0{{pagination.hrefs.length}}</span> #}
+        </p>
       </div>
       <ul class="posts-list" role="list">
         {%- for post in posts -%}
@@ -14,11 +19,11 @@
                 {{ post.data.title | addNbsp | safe }}
               </a>
             </h3>
-            <div class="meta-info cluster step-0">
+            <div class="meta-info cluster step-0 secondary-text">
               <time datetime={{ post.date | htmlDate }}>
                 {{ post.date | readableDate | safe }}
               </time>
-              <span class="separator">|</span>
+              <span class="separator">•</span>
               <p>{{ post.data.author }}</p>
             </div>
           </li>

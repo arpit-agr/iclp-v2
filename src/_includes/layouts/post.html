@@ -5,7 +5,7 @@
     <article class="stack wrapper">
       <header class="flow">
         <h1>{{ title }}</h1>
-        <p class="meta-info">
+        <p class="meta-info step-0">
           <span class="vh">Published by </span> 
           <a href="#">{{ author }}</a> on
           <time datetime={{ date | htmlDate }}>
@@ -15,8 +15,8 @@
       </header>
       {% if editorsNote %}
         <details class="editors-note-container" open>
-          <summary class="all-small-caps">Editor's Note</summary>
-          <div class="editors-note">{{ editorsNote | md | safe }}</div>
+          <summary>Editor's Note</summary>
+          <div class="editors-note">{{ editorsNote | addNbsp | md | safe }}</div>
         </details>
       {% endif %}
       <section class="prose flow">

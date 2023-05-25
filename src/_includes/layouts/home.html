@@ -3,8 +3,11 @@
 {%- block content -%}
   <main class="home" id="main" tabindex="-1">
     <section class="posts-container flow wrapper">
-      <div class="heading-container">
-        <h2 class="all-small-caps">Recent Posts</h2>
+      <div class="heading-container cluster secondary-text step--1">
+        <h2>Recent Posts</h2>
+        <a class="all-posts" href="/archive/">
+          View All <span class="vh">Posts</span> →
+        </a>
       </div>
       <ul class="posts-list" role="list">
         {% set postsList = collections.posts | reverse %}
@@ -15,17 +18,16 @@
                 {{ post.data.title | addNbsp | safe }}
               </a>
             </h3>
-            <div class="meta-info cluster step-0">
+            <div class="meta-info cluster step-0 secondary-text">
               <time datetime={{ post.date | htmlDate }}>
                 {{ post.date | readableDate | safe }}
               </time>
-              <span class="separator">|</span>
+              <span class="separator">•</span>
               <p>{{ post.data.author }}</p>
             </div>
           </li>
         {%- endfor -%}
       </ul>
-      <a class="all-posts btn" href="/archive/">View All Posts</a>
     </section>
   </main>
 {%- endblock -%}

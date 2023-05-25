@@ -21,7 +21,7 @@
 	color: var(--primary-bg);
 	font-size: var(--space-xl-3xl);
 	line-height: var(--lh-1);
-	letter-spacing: var(--ls-1);
+	letter-spacing: var(--ls-2);
 	text-align: center;
 	font-weight: var(--bold);
 	z-index: 1;

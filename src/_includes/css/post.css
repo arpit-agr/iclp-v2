@@ -27,7 +27,8 @@
 .editors-note-container summary {
 	color: var(--primary-text);
 	font-size: var(--editors-note-font-size);
-	/* font-weight: var(--bold); */
+	font-style: italic;
+	letter-spacing: var(--ls-3);
 	cursor: pointer;
 }
 
@@ -39,10 +40,9 @@
 .editors-note-container[open] summary {
 	position: absolute;
 	inset-block-end: calc(100% - (1em * (0.5 * var(--lh-3))));
-	padding-inline: 1ch;
+	padding-inline-end: 1ch;
+	background-color: var(--primary-bg);
 	border-radius: var(--border-radius);
-	background: var(--primary-text);
-	color: var(--primary-bg);
 	translate: 0 50%;
 }
 
@@ -90,6 +90,30 @@
 	--flow-space: 1.5em;
 }
 
+:where(.prose) blockquote {
+	display: grid;
+	grid-template-rows: auto;
+	grid-template-columns: auto auto;
+	gap: 1em 0.5em;
+
+	font-style: italic;
+}
+
+:where(.prose) blockquote:before {
+	content: open-quote;
+	font-size: var(--step-5);
+	line-height: 1;
+}
+
+:where(.prose) blockquote > p {
+	grid-column: 2;
+}
+
+:where(.prose) blockquote > p:last-child::after {
+	content: close-quote;
+	line-height: 1;
+}
+
 @supports (initial-letter: 1 1) or (-webkit-initial-letter: 1 1) {
 	.prose::first-letter {
 		-webkit-initial-letter: 2 2;
@@ -99,12 +123,6 @@
 		color: var(--primary-text);
 		font-weight: var(--bold);
 	}
-}
-
-:where(.prose) blockquote {
-	padding-inline-start: 1em;
-	border-inline-start: var(--underline-thickness) solid var(--border-color);
-	font-style: italic;
 }
 
 :where(.prose) :is(ul, ol) > li + li {

@@ -1,21 +1,26 @@
 :root {
 	/* space */
-	--max-page-width: 48rem;
+	--max-page-width: 48.7rem;
 	--page-gutter: var(--space-s-m);
 	--page-inner-gap: var(--space-4xl);
-	--nav-padding-block: var(--space-2xs-xs);
+	--nav-padding-block: var(--space-xs-s);
 	--nav-padding-inline: var(--space-2xs-xs);
 	--post-item-padding-block: var(--space-m);
 	--button-padding-block: 1ex;
 	--button-padding-inline: 1ch;
 
 	/* type */
-	--serif: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052, serif;
+	--serif: "Sentient", "Iowan Old Style", "Palatino Linotype", "URW Palladio L",
+		P052, serif;
 	--sans-serif: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
 		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-	--bold: 700;
+	--light: 200;
+	--regular: 330;
+	--medium: 400;
+	--bold: 400;
 	--ls-1: -0.03em;
 	--ls-2: -0.015em;
+	--ls-3: 0.015em;
 	--lh-0: 1;
 	--lh-1: 1.1;
 	--lh-2: 1.3425;
@@ -72,10 +77,11 @@ body {
 	flex-direction: column;
 
 	background: var(--body-bg);
-	color: var(--secondary-text);
+	color: var(--primary-text);
 
 	font-family: var(--serif);
 	font-size: var(--step-1);
+	font-weight: var(--regular);
 	line-height: var(--lh-3);
 }
 
@@ -91,19 +97,20 @@ h1,
 h2,
 h3 {
 	color: var(--primary-text);
-	font-weight: var(--bold);
 }
 
 h2,
 h3 {
 	line-height: var(--lh-2);
 	letter-spacing: var(--ls-2);
+	font-weight: var(--medium);
 }
 
 h1 {
 	font-size: var(--step-4);
+	font-weight: var(--bold);
 	line-height: var(--lh-1);
-	letter-spacing: var(--ls-1);
+	letter-spacing: var(--ls-2);
 }
 
 h2 {
@@ -119,7 +126,7 @@ a {
 	color: currentColor;
 	text-decoration-color: var(--link-underline);
 	text-decoration-thickness: var(--underline-thickness);
-	text-underline-offset: 0.2em;
+	text-underline-offset: 0.24em;
 	transition: all var(--transition-duration) var(--transition-timing-function);
 }
 
@@ -134,8 +141,7 @@ button,
 	background-color: var(--btn-bg, var(--primary-text));
 	border-radius: var(--border-radius);
 	color: var(--btn-color, var(--primary-bg));
-	font-size: var(--step-0);
-	font-weight: var(--bold);
+	font-weight: var(--medium);
 	text-decoration: none;
 }
 
@@ -145,10 +151,10 @@ button:where(:hover, :focus),
 	--btn-color: var(--primary-text);
 }
 
-ul,
+/* ul,
 ol {
 	padding-inline-start: 1em;
-}
+} */
 
 :where(ul, ol)[role="list"] {
 	padding-inline-start: 0;
@@ -160,6 +166,10 @@ ol {
 	}
 }
 
+summary {
+	font-weight: var(--medium);
+}
+
 input {
 	border: unset;
 	padding: var(--button-padding-block) var(--button-padding-inline);
@@ -168,7 +178,7 @@ input {
 }
 
 strong {
-	font-weight: var(--bold);
+	font-weight: var(--medium);
 }
 
 hr {
