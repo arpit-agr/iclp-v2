@@ -24,7 +24,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addFilter("addNbsp", addNbsp);
 	eleventyConfig.addFilter("addNbspLastThreeWords", addNbspLastThreeWords);
 	eleventyConfig.addAsyncFilter(
-		"liquidate",
+		"liquidDate",
 		async function (date, format = "%Y/%m/%d") {
 			const content = eleventyConfig.javascriptFunctions.renderTemplate(
 				`{{ "${date}" | date: "${format}" }}`,
