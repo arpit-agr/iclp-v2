@@ -1,12 +1,7 @@
 {
-	"name": "Indian Constitutional Law & Philosophy",
+	"name": "Indian Constitutional Law and Philosophy",
 	"description": "This domain is for use in illustrative examples in documents. You may use this domain in literature without prior coordination or asking for permission.",
 	"url": "https://example.com",
 	"themeColor": "#fdfcfb",
-	"colorScheme": "light dark",
-	"banner": {
-		"image": "bg_footer.png",
-		"text": "“To no one will we sell, or deny, or delay, right or justice”",
-		"clause": "[40]"
-	}
+	"colorScheme": "light dark"
 }
