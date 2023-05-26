@@ -28,12 +28,12 @@
           {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
           {% if not loop.last %}
             <span>
-              <a href="{{ tagUrl }}">{{- tag | replace("-", " ") -}}</a>
+              <a href="{{ tagUrl }}" rel="tag">{{- tag | replace("-", " ") -}}</a>
               <span>,&nbsp;</span>
             </span>
           {% else %}
             <span>
-              <a href="{{ tagUrl }}">{{- tag | replace("-", " ") -}}</a>
+              <a href="{{ tagUrl }}" rel="tag">{{- tag | replace("-", " ") -}}</a>
             </span>
           {% endif %}
         {% endfor %}
