@@ -4,12 +4,14 @@ const { EleventyRenderPlugin } = require("@11ty/eleventy");
 // Importing from config
 const getPosts = require("./config/collections/posts.js");
 const getPages = require("./config/collections/pages.js");
+const getTags = require("./config/collections/tags.js");
 const md = require("./config/filters/md.js");
 const { readableDate, htmlDate } = require("./config/filters/date.js");
 const {
 	addNbsp,
 	addNbspLastThreeWords,
 } = require("./config/filters/addNbsp.js");
+const filterTagList = require("./config/filters/filterTagList.js");
 const imageShortcode = require("./config/shortcodes/image.js");
 const assetHash = require("./config/plugins/asset-hash.js");
 const htmlmin = require("./config/transforms/html-min.js");
@@ -18,6 +20,7 @@ module.exports = function (eleventyConfig) {
 	//Add Collections
 	eleventyConfig.addCollection("posts", getPosts);
 	eleventyConfig.addCollection("pages", getPages);
+	eleventyConfig.addCollection("tagsList", getTags);
 
 	//Add Filters
 	eleventyConfig.addFilter("md", md);
@@ -25,6 +28,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addFilter("readableDate", readableDate);
 	eleventyConfig.addFilter("addNbsp", addNbsp);
 	eleventyConfig.addFilter("addNbspLastThreeWords", addNbspLastThreeWords);
+	eleventyConfig.addFilter("filterTagList", filterTagList);
 	eleventyConfig.addAsyncFilter(
 		"liquidDate",
 		async function (date, format = "%Y/%m/%d") {
