@@ -2,6 +2,10 @@
 	--stack-gap: var(--page-inner-gap);
 }
 
+.site-title {
+	text-transform: capitalize;
+}
+
 .site-nav-container {
 	border-block-end: var(--underline-thickness) solid var(--border-color);
 }

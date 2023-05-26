@@ -1,0 +1,14 @@
+.tags-list {
+	--flow-space: var(--space-3xs);
+}
+
+@media (min-width: 40rem) {
+	.tags-list {
+		column-count: 2;
+		column-gap: var(--space-xl-2xl);
+	}
+}
+
+.tags-list a {
+	text-transform: capitalize;
+}

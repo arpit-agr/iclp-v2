@@ -25,14 +25,15 @@
       <p class="tag-list step-0">
         Tagged in 
         {% for tag in tags %}
+          {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
           {% if not loop.last %}
             <span>
-              <a href="#">{{- tag | replace("-", " ") -}}</a>
+              <a href="{{ tagUrl }}">{{- tag | replace("-", " ") -}}</a>
               <span>,&nbsp;</span>
             </span>
           {% else %}
             <span>
-              <a href="#">{{- tag | replace("-", " ") -}}</a>
+              <a href="{{ tagUrl }}">{{- tag | replace("-", " ") -}}</a>
             </span>
           {% endif %}
         {% endfor %}

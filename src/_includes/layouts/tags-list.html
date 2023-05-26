@@ -1,0 +1,17 @@
+{%- extends "layouts/base.html" -%}
+
+{%- block content -%}
+  <main id="main" tabindex="-1">
+    <section class="wrapper">
+      <ul class="tags-list flow" role="list">
+        {% set tags = collections.tagsList | sort %}
+        {%- for tag in tags -%}
+          {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+          <li>
+            <a href="{{ tagUrl }}">{{ tag | replace("-", " ") -}}</a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </section>
+  </main>
+{%- endblock -%}

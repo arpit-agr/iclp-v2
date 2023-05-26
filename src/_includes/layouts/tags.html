@@ -1,0 +1,33 @@
+{%- extends "layouts/base.html" -%}
+
+{%- block content -%}
+  <main class="tags" id="main" tabindex="-1">
+    <section class="posts-container flow wrapper">
+      <div class="heading-container cluster secondary-text step--1">
+        <h2>Relevant Posts</h2>
+        <a href="/tags/">View all tags →</a>
+      </div>
+      <ul class="posts-list" role="list">
+        {% set postsList = collections[ tag ] %}
+        {%- for post in postsList | reverse -%}
+          <li>
+            <h3>
+              <a href="{{ post.url }}">
+                {{ post.data.title | addNbsp | safe }}
+              </a>
+            </h3>
+            <time
+              class="step-0 secondary-text"
+              datetime={{ post.date | htmlDate }}
+            >
+              <span class="only-date">{{ post.date | onlyDate }}</span>
+              <span>{{ post.date | onlyMonthYear }}</span>
+            </time>
+            <span class="separator">•</span>
+            <span class="step-0 secondary-text">{{ post.data.author }}</span>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </section>
+  </main>
+{%- endblock -%}
